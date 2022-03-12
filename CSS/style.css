@@ -43,8 +43,8 @@ nav{
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 0px 50px;
-  height: 50px;
+  padding: 0px 30px;
+  /* height: 50px; */
   line-height: 50px;
   background-color: #000E42;
   z-index: 1;
@@ -62,9 +62,10 @@ nav{
 
 .Nav-right{
   float: right;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  flex-direction: row;
+  display: flex;
   column-gap: 30px;
+  flex-wrap: wrap;
 }
 
 .Nav-right a{
@@ -72,29 +73,57 @@ nav{
   text-decoration: none;
 }
 
-Footer{
-  height: 183px;
+.Navoff{
+  color: white;
+}
+
+footer{
+  min-height: 183px;
+  display: inline-block;
   background-color: #000E42;
 }
 
 .leftfooter{
   float: left;
-  width: 30%;
-  padding: 20px;
+  width: 40%;
+  padding: 20px 0px 20px 80px;
   box-sizing: border-box;
 }
 
+.footerimages img{
+  margin-right: 10px;
+}
+
 .leftfooter p{
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 9px;
+  font-weight: 100;
+  font-size: 10px;
+  line-height: 10px;
   color: white;
+  margin: 10px 0px;
+}
+
+.footericons img{
+  width: 15px;
+  margin-right: 20px;
 }
 
 .rightfooter{
   float: right;
   display: grid;
   grid-template-columns: auto auto;
+  grid-column-gap: 100px;
+  grid-row-gap: 15px;
+  margin: 32px 10% 0px 0px;
+}
+
+.rightfooter a{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+
 }
 
 main{
@@ -110,6 +139,7 @@ main{
 
 .Section1{
   background-image: url("../Images/1 Section1.png");
+  background-color: #000E42;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -177,57 +207,178 @@ main{
   background: url("../Images/1 Section2.png");
   background-size: cover;
   color: white;
+  box-sizing: border-box;
+  padding: 120px 15%;
 }
 
-.Button{
+.Section2 h1{
+  font-size: 37px;
+  margin-bottom: 10px;
+}
+
+.Section2 p{
+  font-size: 20px;
+}
+
+.Section2 span{
   display: inline-block;
-  border: 4px solid white;
+  margin-top: 20px;
+  font-size: 40px;
+  font-family: "Nexa";
+}
+
+#Countdown{
+  margin: 0px 5px 35px 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+.Button{
+  border: 2px solid white;
   color: white;
   text-decoration: none;
   border-radius: 25px;
-  padding: 10px;
+  padding: 12px 20px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 25px;
+  margin: 0px 20px 0px 0px;
+  transition: background-color 0.3s linear;
 }
 
 .Button:hover{
   background-color: white;
+  color: #2857CE;
+}
+
+.Button img{
+  height: 20px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.Button:hover img{
+  filter: invert(26%) sepia(65%) saturate(2793%) hue-rotate(216deg) brightness(85%) contrast(89%);
 }
 
 .Section3{
   width: 100%;
   background: url("../Images/1 Section3.png") white;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 .Section3_1{
   width: 100%;
-  height: 550px;
+  min-height: 550px;
+  padding: 20px 0px;
   /* background-color: blue; */
+}
+
+.Section3_1 h1{
+  font-weight: 800;
+  font-size: 37px;
+  line-height: 56px;
+  text-align: center;
+  color: #000E42;
+  margin: 25px 0px 10px 0px;
 }
 
 .FlexCandidates{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px;
+  padding:  30px 50px;
   box-sizing: border-box;
 }
 
 .FlexitemCandidates{
   width: 200px;
-  background-color: yellow;
-
+  background: url("../Images/Cand BG.png");
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 290px;
 }
 
 .FlexitemCandidates img{
-
+  box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  width: 150px;
+  height: 150px;
+  border-radius: 75%;
 }
 
+.FlexitemCandidates h2{
+  color: #2857CE;
+  font-size: 15px;
+}
+
+.FlexitemCandidates h3{
+  font-size: 12px;
+}
+
+.FlexitemCandidates p{
+  font-size: 12px;
+}
+
+.LearnMore{
+  color: #2857CE;
+  text-decoration: none;
+  text-align: center;
+  width: 400px;
+  display: block;
+  margin: 15px auto 20px;
+  padding: 3px;
+  font-size: 20px;
+  border: 1px solid #2857CE;
+  border-radius: 20px;
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+
+.LearnMore:hover{
+  background-color: #2857CE;
+  color: white;
+}
 
 .Section3_2{
   width: 100%;
   height: 1200px;
-  /* background-color: green; */
+  background-color: green;
+  display: flex;
+  padding: 60px;
+  box-sizing: border-box;
+  align-content: space-between;
+}
+
+.left3_2{
+  width: 60%;
+  min-width: 500px;
+  background-color: yellow;
+}
+
+.Topleft3_2{
+  width: 100%;
+  height: 600px;
+  background-color: black;
+  margin-bottom: 40px;
+}
+
+.Botleft3_2{
+  width: 100%;
+  height: 440px;
+  background-color: red;
+}
+
+.right3_2{
+  width: 40%;
+  min-width: 300px;
+  background-color: blue;
 }

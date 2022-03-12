@@ -2,7 +2,7 @@ $(document).ready(function () {
 
   $(function(){
       $(window).scroll(function(){
-        console.log($(this).scrollTop())
+        // console.log($(this).scrollTop())
           if($(this).scrollTop() <= 00){
               $('.section1interactive').css('width', '100%');
               $('.Section1Content').css('display', 'none');
@@ -49,8 +49,10 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   // Display the result in the element with id="demo"
-  document.getElementById("Countdown").innerHTML = days + ":" + hours + ":"
-  + minutes + ":" + seconds + " ";
+  document.getElementsByClassName("CountdownClass")[0].innerHTML = days.toLocaleString(undefined,{minimumIntegerDigits: 2});
+  document.getElementsByClassName("CountdownClass")[1].innerHTML = ":" + hours.toLocaleString(undefined,{minimumIntegerDigits: 2}) + ":" ;
+  document.getElementsByClassName("CountdownClass")[2].innerHTML = minutes.toLocaleString(undefined,{minimumIntegerDigits: 2});
+  document.getElementsByClassName("CountdownClass")[3].innerHTML = ":" + seconds.toLocaleString(undefined,{minimumIntegerDigits: 2}) + "&nbsp;";
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
