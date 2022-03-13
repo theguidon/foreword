@@ -6,6 +6,26 @@
   font-family: 'Roboto';
 }
 
+[data-scroll] {
+  transition:  opacity 0.5s linear 0.05s, transform 0.5s linear 0.05s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0px);
+}
+/* [data-scroll-dir-y="-1"] [data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(-40px);
+} */
+[data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(40px);
+}
+/* .footer div[data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(40px) !important;
+} */
+
 @font-face{
   font-family: 'Nexa';
   src: url("../Fonts/Nexa Bold.otf");
@@ -79,8 +99,9 @@ nav{
 
 footer{
   min-height: 183px;
-  display: inline-block;
+  display: block;
   background-color: #000E42;
+  overflow: hidden;
 }
 
 .leftfooter{
@@ -127,26 +148,27 @@ footer{
 }
 
 main{
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
+
 /* NAV end */
 /* Section1 Effects start ver 1.0 */
 
 .Space{
   width: 100%;
-  height: 450px;
+  height: 500px;
 }
 
 .Section1{
-  background-image: url("../Images/1 Section1.png");
+  background-image: url("../Images/0 Section1.png");
   background-color: #000E42;
   background-position: center;
   background-size: cover;
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  position: fixed;
-  top: 0px;
+  position: sticky;
+  bottom: 0px;
 }
 
 .section1interactive{
@@ -157,8 +179,6 @@ main{
   transform: translate(-50%, -50%);
 }
 
-
-
 .Section1Content{
   margin-top: 25%;
   margin-left: 12%;
@@ -166,7 +186,7 @@ main{
   transform: translateY(0px);
   animation: appear 1s;
   display: none;
-  transition: opacity 0.2s linear;
+  transition: opacity 0.3s linear;
 }
 
 @keyframes appear {
@@ -204,7 +224,7 @@ main{
 .Section2{
   width: 100%;
   height: 575px;
-  background: url("../Images/1 Section2.png");
+  background: url("../Images/0 Section2.png");
   background-size: cover;
   color: white;
   box-sizing: border-box;
@@ -214,6 +234,8 @@ main{
 .Section2 h1{
   font-size: 37px;
   margin-bottom: 10px;
+  animation: appear 1s;
+  transition: opacity 0.3s linear;
 }
 
 .Section2 p{
@@ -268,7 +290,7 @@ main{
 
 .Section3{
   width: 100%;
-  background: url("../Images/1 Section3.png") white;
+  background: url("../Images/0 Section3.png") white;
   background-size: cover;
   box-sizing: border-box;
 }
@@ -276,7 +298,7 @@ main{
 .Section3_1{
   width: 100%;
   min-height: 550px;
-  padding: 20px 0px;
+  padding: 20px 0px 0px;
   /* background-color: blue; */
 }
 
@@ -340,7 +362,7 @@ main{
   font-size: 20px;
   border: 1px solid #2857CE;
   border-radius: 20px;
-  transition: background-color 0.1s linear, color 0.1s linear;
+  transition: background-color 0.2s linear, color 0.1s linear, opacity 0.5s linear, transform 0.5s linear;
 }
 
 .LearnMore:hover{
@@ -350,35 +372,70 @@ main{
 
 .Section3_2{
   width: 100%;
-  height: 1200px;
-  background-color: green;
   display: flex;
-  padding: 60px;
+  padding: 30px 120px;
   box-sizing: border-box;
   align-content: space-between;
 }
 
 .left3_2{
   width: 60%;
-  min-width: 500px;
-  background-color: yellow;
 }
 
 .Topleft3_2{
+  margin: 0px 40px 40px;
+  width: calc(100% - 80px);
+  display: inline-block;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.Topleft3_2 img{
   width: 100%;
-  height: 600px;
-  background-color: black;
-  margin-bottom: 40px;
+}
+
+.Topleft3_2 p{
+  margin: 30px 40px;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.Topleft3_2 .LearnMore{
+  width: 50% !important;
 }
 
 .Botleft3_2{
+  margin: 0px 40px 40px;
+  width: calc(100% - 80px);
+  box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.Botleft3_2 iframe{
   width: 100%;
-  height: 440px;
-  background-color: red;
+  height: 439px;
+  border-radius: 10px;
+}
+
+.LearnMore.BotLM{
+  width: 220px;
 }
 
 .right3_2{
   width: 40%;
-  min-width: 300px;
-  background-color: blue;
+  margin: 0px 40px 40px 0px;
+}
+
+.twitframe{
+  overflow: scroll;
+  display: block;
+  margin: 0px 0px 40px 0px;
+  box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.right3_2 .LearnMore{
+  width: 160px;
 }

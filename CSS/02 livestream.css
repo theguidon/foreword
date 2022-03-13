@@ -1,0 +1,162 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: none;
+  font-family: 'Roboto';
+}
+
+[data-scroll] {
+  transition:  opacity 0.5s linear 0.05s, transform 0.5s linear 0.05s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0px);
+}
+/* [data-scroll-dir-y="-1"] [data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(-40px);
+} */
+[data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(40px);
+}
+/* .footer div[data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(40px) !important;
+} */
+
+@font-face{
+  font-family: 'Nexa';
+  src: url("../Fonts/Nexa Bold.otf");
+}
+@font-face{
+  font-family: 'RobotoBold';
+  src: url("../Fonts/Roboto-Bold.ttf");
+}
+@font-face{
+  font-family: 'Roboto';
+  src: url("../Fonts/Roboto-Regular.ttf");
+}
+
+Body{
+  /* background: red; */
+}
+
+h1, h2, h3{
+  font-family: 'Nexa';
+}
+
+h4, h5{
+  font-family: 'RobotoBold';
+}
+
+p{
+  font-family: 'Roboto';
+}
+
+
+/* NAV start ver 1.0 */
+nav{
+  position:fixed;
+  top: 0px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 30px;
+  /* height: 50px; */
+  line-height: 50px;
+  background-color: #000E42;
+  z-index: 1;
+
+}
+
+.Nav-left{
+  float: left;
+}
+
+.Nav-left a img{
+  vertical-align: middle;
+  height: 30px;
+}
+
+.Nav-right{
+  float: right;
+  flex-direction: row;
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.Nav-right a{
+  color: white;
+  text-decoration: none;
+}
+
+.Navoff{
+  color: white;
+}
+
+footer{
+  min-height: 183px;
+  display: block;
+  background-color: #000E42;
+}
+
+.leftfooter{
+  float: left;
+  width: 40%;
+  padding: 20px 0px 20px 80px;
+  box-sizing: border-box;
+}
+
+.footerimages img{
+  margin-right: 10px;
+}
+
+.leftfooter p{
+  font-weight: 100;
+  font-size: 10px;
+  line-height: 10px;
+  color: white;
+  margin: 10px 0px;
+}
+
+.footericons img{
+  width: 15px;
+  margin-right: 20px;
+}
+
+.rightfooter{
+  float: right;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 100px;
+  grid-row-gap: 15px;
+  margin: 32px 10% 0px 0px;
+}
+
+.rightfooter a{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+
+}
+
+main{
+  margin-top: 50px;
+}
+/* NAV end */
+
+.Section1{
+  width: 100%;
+  height: 815px;
+  background: url("../Images/2 Section1.png");
+  background-size: cover;
+  color: white;
+  box-sizing: border-box;
+  padding: 120px 15%;
+}
