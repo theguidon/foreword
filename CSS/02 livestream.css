@@ -101,6 +101,7 @@ footer{
   min-height: 183px;
   display: block;
   background-color: #000E42;
+  overflow: hidden;
 }
 
 .leftfooter{

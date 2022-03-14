@@ -6,8 +6,22 @@
     <link rel="stylesheet" href="CSS/03 visions.css">
     <meta name="viewport">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-    <script src="script.js"></script>
-    <script type="text/javascript"></script>
+    <!-- <script src="script.js"></script> -->
+    <script type="text/javascript">
+      function Vision1() {
+        document.getElementsByClassName("Section2pop")[0].style.display = "block";
+        document.getElementsByClassName("Section2_1pop")[0].style.display = "block";
+      }
+      function Vision2() {
+        document.getElementsByClassName("Section2pop")[0].style.display = "block";
+        document.getElementsByClassName("Section2_1pop2")[0].style.display = "block";
+      }
+      function Visionremove() {
+        document.getElementsByClassName("Section2pop")[0].style.display = "none";
+        document.getElementsByClassName("Section2_1pop")[0].style.display = "none";
+        document.getElementsByClassName("Section2_1pop2")[0].style.display = "none";
+      }
+    </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
@@ -29,6 +43,51 @@
     <main>
       <div class="Section1">
 
+      </div>
+      <div class="Section2pop" onclick="Visionremove()"></div>
+      <div class="Section2_1pop">
+
+      </div>
+      <div class="Section2_1pop2">
+
+      </div>
+      <div class="Section2">
+        <div class="Section2Text">
+          <h1>Foreword 2022 Candidates</h1>
+          <p>Click on the cards to learn more about said candidate and access their campaign infographic</p>
+        </div>
+        <div class="Section2_1">
+          <div class="Candidate2_1" onclick="Vision1()">
+            <img src="Images/Cand De Guzman.png" alt="">
+            <h2>De Guzman, Leody</h2>
+            <h3>Party here</h3>
+          </div>
+          <div class="Candidate2_1">
+            <img src="Images/Cand De Guzman.png" alt="">
+            <h2>De Guzman, Leody</h2>
+            <h3>Party here</h3>
+          </div>
+          <div class="Candidate2_1">
+            <img src="Images/Cand De Guzman.png" alt="">
+            <h2>De Guzman, Leody</h2>
+            <h3>Party here</h3>
+          </div>
+          <div class="Candidate2_1" onclick="Vision2()">
+            <img src="Images/Cand De Guzman.png" alt="">
+            <h2>De Guzman, Leody</h2>
+            <h3>Party here</h3>
+          </div>
+          <div class="Candidate2_1">
+            <img src="Images/Cand De Guzman.png" alt="">
+            <h2>De Guzman, Leody</h2>
+            <h3>Party here</h3>
+          </div>
+          <div class="Candidate2_1">
+            <img src="Images/Cand De Guzman.png" alt="">
+            <h2>De Guzman, Leody</h2>
+            <h3>Party here</h3>
+          </div>
+        </div>
       </div>
       <footer> <!-- Version 1.1 -->
         <div class="leftfooter">

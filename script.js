@@ -38,7 +38,7 @@ window.onscroll = function (e) {
     document.getElementsByClassName("section1interactive")[0].style.display = "block";
 
   }
-  else if(window.scrollY < 500){
+  else if(window.scrollY > 500){
     document.getElementsByClassName("section1interactive")[0].style.display = "none";
     document.getElementsByClassName("Section1Content")[0].style.display = "inherit";
     document.getElementsByClassName("Section1Content")[0].style.opacity = "1";
