@@ -35,11 +35,11 @@ window.onscroll = function (e) {
 
   if(window.scrollY <= 500){
     // document.getElementsByClassName("Section1")[0].style.position = "fixed";
-    document.getElementsByClassName("section1interactive")[0].style.display = "block";
+    document.getElementsByClassName("section1interactive")[0].style.visibility = "visible";
 
   }
   else if(window.scrollY > 500){
-    document.getElementsByClassName("section1interactive")[0].style.display = "none";
+    document.getElementsByClassName("section1interactive")[0].style.visibility = "hidden";
     document.getElementsByClassName("Section1Content")[0].style.display = "inherit";
     document.getElementsByClassName("Section1Content")[0].style.opacity = "1";
     // document.getElementsByClassName("Section1")[0].style.position = "relative";

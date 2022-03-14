@@ -9,17 +9,30 @@
     <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
       function Vision1() {
-        document.getElementsByClassName("Section2pop")[0].style.display = "block";
-        document.getElementsByClassName("Section2_1pop")[0].style.display = "block";
+        document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
+        document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
+        document.getElementsByClassName("Section2_1pop")[0].style.visibility = "visible";
+        document.getElementsByClassName("Section2_1pop")[0].style.opacity = "1";
+        document.getElementById('ChangeID').innerHTML = "Click anywhere outside the candidate information panel to exit view mode."
+        document.getElementById('ChangeID').style.color = "#0AA2D1";
       }
       function Vision2() {
-        document.getElementsByClassName("Section2pop")[0].style.display = "block";
-        document.getElementsByClassName("Section2_1pop2")[0].style.display = "block";
+        document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
+        document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
+        document.getElementsByClassName("Section2_1pop2")[0].style.visibility = "visible";
+        document.getElementsByClassName("Section2_1pop2")[0].style.opacity = "1";
+        document.getElementById('ChangeID').innerHTML = "Click anywhere outside the candidate information panel to exit view mode."
+        document.getElementById('ChangeID').style.color = "#0AA2D1";
       }
       function Visionremove() {
-        document.getElementsByClassName("Section2pop")[0].style.display = "none";
-        document.getElementsByClassName("Section2_1pop")[0].style.display = "none";
-        document.getElementsByClassName("Section2_1pop2")[0].style.display = "none";
+        document.getElementsByClassName("Section2pop")[0].style.visibility = "hidden";
+        document.getElementsByClassName("Section2pop")[0].style.opacity = "0";
+        document.getElementsByClassName("Section2_1pop")[0].style.visibility = "hidden";
+        document.getElementsByClassName("Section2_1pop")[0].style.opacity = "0";
+        document.getElementsByClassName("Section2_1pop2")[0].style.visibility = "hidden";
+        document.getElementsByClassName("Section2_1pop2")[0].style.opacity = "0";
+        document.getElementById('ChangeID').innerHTML = "Click on the cards to learn more about said candidate and access their campaign infographic"
+        document.getElementById('ChangeID').style.color = "black";
       }
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
@@ -54,7 +67,7 @@
       <div class="Section2">
         <div class="Section2Text">
           <h1>Foreword 2022 Candidates</h1>
-          <p>Click on the cards to learn more about said candidate and access their campaign infographic</p>
+          <p id="ChangeID">Click on the cards to learn more about said candidate and access their campaign infographic</p>
         </div>
         <div class="Section2_1">
           <div class="Candidate2_1" onclick="Vision1()">
@@ -62,12 +75,12 @@
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1">
+          <div class="Candidate2_1" onclick="Vision1()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1">
+          <div class="Candidate2_1" onclick="Vision1()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
@@ -77,12 +90,12 @@
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1">
+          <div class="Candidate2_1" onclick="Vision2()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1">
+          <div class="Candidate2_1" onclick="Vision2()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
