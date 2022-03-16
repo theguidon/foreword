@@ -56,7 +56,7 @@ p{
 }
 
 
-/* NAV start ver 1.0 */
+/* NAV start ver 1.1 */
 nav{
   position:fixed;
   top: 0px;
@@ -89,12 +89,17 @@ nav{
 }
 
 .Nav-right a{
-  color: white;
+  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
 }
 
-.Navoff{
+.Nav-right a:hover{
   color: white;
+}
+
+.Navoff{
+  color: white !important;
+  font-family: "RobotoBold";
 }
 
 footer{
@@ -123,7 +128,7 @@ footer{
   margin: 10px 0px;
 }
 
-.footericons img{
+.footericons a img{
   width: 15px;
   margin-right: 20px;
 }
@@ -144,7 +149,10 @@ footer{
   line-height: 16px;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
+}
 
+.rightfooter a:hover{
+  color: white;
 }
 
 main{
@@ -314,18 +322,19 @@ main{
 .FlexCandidates{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding:  30px 50px;
+  justify-content: space-between;
+  padding:  30px 80px;
   box-sizing: border-box;
 }
 
 .FlexitemCandidates{
-  width: 200px;
+  width: 220px;
   background: url("../Images/Cand BG.png");
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
   padding: 0px 20px;
+  margin: 10px 10px;
   box-sizing: border-box;
   text-align: center;
   height: 290px;
@@ -355,10 +364,10 @@ main{
   color: #2857CE;
   text-decoration: none;
   text-align: center;
-  width: 400px;
+  width: 350px;
   display: block;
   margin: 15px auto 20px;
-  padding: 3px;
+  padding: 5px 0px;
   font-size: 20px;
   border: 1px solid #2857CE;
   border-radius: 20px;
@@ -419,9 +428,9 @@ main{
   border-radius: 10px;
 }
 
-.LearnMore.BotLM{
+/* .LearnMore.BotLM{
   width: 220px;
-}
+} */
 
 .right3_2{
   width: 40%;
@@ -436,6 +445,6 @@ main{
   border-radius: 10px;
 }
 
-.right3_2 .LearnMore{
+/* .right3_2 .LearnMore{
   width: 160px;
-}
+} */

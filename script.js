@@ -47,7 +47,7 @@ window.onscroll = function (e) {
 }
 
 // COUNTER ----------------------
-var countDownDate = new Date("April 2, 2022 15:00:00").getTime();
+var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
