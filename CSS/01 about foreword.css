@@ -55,8 +55,7 @@ p{
   font-family: 'Roboto';
 }
 
-
-/* NAV start ver 1.0 */
+/* NAV start ver 1.2 */
 nav{
   position:fixed;
   top: 0px;
@@ -89,12 +88,18 @@ nav{
 }
 
 .Nav-right a{
-  color: white;
+  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
 }
 
-.Navoff{
+.Nav-right a:hover{
   color: white;
+}
+
+.Navoff{
+  color: white !important;
+  font-family: "RobotoBold";
+  pointer-events: none;
 }
 
 footer{
@@ -123,7 +128,7 @@ footer{
   margin: 10px 0px;
 }
 
-.footericons img{
+.footericons a img{
   width: 15px;
   margin-right: 20px;
 }
@@ -144,20 +149,286 @@ footer{
   line-height: 16px;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
+}
 
+.rightfooter a:hover{
+  color: white;
 }
 
 main{
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
+
 /* NAV end */
 
 .Section1{
+  margin-top: 50px;
   width: 100%;
   height: 815px;
   background: url("../Images/1 Section1.png");
   background-size: cover;
   color: white;
   box-sizing: border-box;
-  padding: 120px 15%;
+  padding: 120px 0px;
+  display: flex;
+}
+
+.Section1_1{
+  margin: 50px 0px 0px 15%;
+  width: 50%;
+}
+
+.Section1_1 h1{
+  font-size: 37px;
+  line-height: 56px;
+}
+
+.Section1_1 p{
+  font-size: 20px;
+  line-height: 23px;
+  width: 346px;
+  margin-bottom: 30px
+}
+
+.Section1_2{
+  width: 50%;
+}
+
+.Section1_2 img{
+  width: 90%;
+  max-width: 620px;
+}
+
+.Button{
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  margin: 0px 20px 10px 0px;
+  transition: background-color 0.3s linear;
+}
+
+.Button:hover{
+  background-color: white;
+  color: #2857CE;
+}
+
+.Button img{
+  height: 20px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.Button:hover img{
+  filter: invert(26%) sepia(65%) saturate(2793%) hue-rotate(216deg) brightness(85%) contrast(89%);
+}
+
+.Section2{
+  background: url("../Images/1 Section2.png");
+  background-size: cover;
+  width: 100%;
+}
+
+.Section2 h2{
+  font-size: 37px;
+  line-height: 56px;
+  color: white;
+  text-align: center;
+  padding: 13px 0px;
+}
+
+.Section2flex{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 40px;
+  padding: 20px 0px 40px;
+}
+
+.Section2flex div h1{
+  font-size: 32px;
+  line-height: 49px;
+  color: #0AA2D1;
+  margin: 15px 0px 100px;
+}
+
+.Section2flex div p{
+  font-size: 18px;
+  line-height: 21px;
+  color: #858585;
+  padding: 0px 25px 30px;
+}
+
+.Section2_1{
+  width: 530px;
+  background: url("../Images/1 Section2_1.png");
+  background-size: cover;
+  background-position: center top;
+  margin: 0px 0px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.Section2_2{
+  width: 530px;
+  background: url("../Images/1 Section2_2.png");
+  background-size: cover;
+  background-position: center top;
+  margin: 0px 0px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.Section3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: url("../Images/1 Section3.png");
+  background-size: cover;
+  padding: 50px 10px 70px;
+  box-sizing: border-box;
+}
+
+.Section3_1{
+  width: 40%;
+  min-width: 500px;
+  padding: 30px 30px 0px 30px;
+  box-sizing: border-box;
+}
+
+.Section3_1 img{
+  margin-bottom: 20px;
+}
+
+.Section3_1 p{
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.Section3_2{
+  width: 50%;
+  min-width: 200px;
+}
+
+.Section3_2 img{
+  width: 100%;
+  max-width: 900px;
+  margin-top: 10px;
+}
+
+.Section4{
+  background: url("../Images/1 Section4.png");
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+}
+
+.Section4 h1{
+  font-size: 37px;
+  line-height: 56px;
+  color: #000E42;
+  margin: 30px 0px 10px 0px;
+}
+
+.Section4 p{
+  max-width: 900px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000E42;
+  margin: 0px auto 50px;
+}
+
+.Section4img{
+  margin-bottom: 20px;
+}
+
+.LearnMore{
+  color: #2857CE;
+  text-decoration: none;
+  text-align: center;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  margin: 15px auto 20px;
+  padding: 5px 0px;
+  font-size: 20px;
+  border: 1px solid #2857CE;
+  border-radius: 20px;
+  transition: background-color 0.2s linear, color 0.1s linear, opacity 0.5s linear, transform 0.5s linear;
+}
+
+.LearnMore:hover{
+  background-color: #2857CE;
+  color: white;
+}
+
+.LearnMore img{
+  width: 20px;
+  height: 20px
+}
+
+.LearnMore:hover img{
+  filter: invert(100%) sepia(9%) saturate(208%) hue-rotate(1deg) brightness(112%) contrast(101%);
+}
+
+.Section4flex{
+  margin: 60px 0px 20px;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.Section4flex h1{
+  font-size: 37px;
+  line-height: 56px;
+  color: white;
+  margin-top: 10px;
+}
+
+.Section4flex p{
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  width: 300px;
+  text-align: left;
+  margin-left: 0px;
+}
+
+.Section4flex a{
+  font-size: 12px;
+  line-height: 14px;
+  color: white;
+}
+
+.Section4Content1, .Section4Content2{
+  width: 500px;
+  height: 230px;
+  border-radius: 20px;
+  padding: 0px 110px 0px 35px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.Section4Content1{
+  background-image: url("../Images/1 Section4_1.png")
+}
+
+.Section4Content2{
+  background-image: url("../Images/1 Section4_2.png")
 }

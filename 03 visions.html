@@ -8,20 +8,11 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
-      function Vision1() {
+      function Vision() {
         document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
         document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
         document.getElementsByClassName("Section2_1pop")[0].style.visibility = "visible";
         document.getElementsByClassName("Section2_1pop")[0].style.opacity = "1";
-        document.getElementById('ChangeID').innerHTML = "Click anywhere outside the candidate information panel to exit view mode."
-        document.getElementById('ChangeID').style.color = "#0AA2D1";
-      }
-      function Vision2() {
-        document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
-        document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
-        document.getElementsByClassName("Section2_1pop2")[0].style.visibility = "visible";
-        document.getElementsByClassName("Section2_1pop2")[0].style.opacity = "1";
-        document.getElementById('ChangeID').innerHTML = "Click anywhere outside the candidate information panel to exit view mode."
         document.getElementById('ChangeID').style.color = "#0AA2D1";
       }
       function Visionremove() {
@@ -29,9 +20,6 @@
         document.getElementsByClassName("Section2pop")[0].style.opacity = "0";
         document.getElementsByClassName("Section2_1pop")[0].style.visibility = "hidden";
         document.getElementsByClassName("Section2_1pop")[0].style.opacity = "0";
-        document.getElementsByClassName("Section2_1pop2")[0].style.visibility = "hidden";
-        document.getElementsByClassName("Section2_1pop2")[0].style.opacity = "0";
-        document.getElementById('ChangeID').innerHTML = "Click on the cards to learn more about said candidate and access their campaign infographic"
         document.getElementById('ChangeID').style.color = "black";
       }
     </script>
@@ -39,12 +27,12 @@
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 1.1 -->
+    <nav> <!-- Version 1.2 -->
       <span class="Nav-left">
         <a href=""><img class="Home" src="Images/Foreword Logo White.png" alt=""></a>
       </span>
       <span class="Nav-right">
-       <a href="index.html">Home</a>
+       <a href="index.html" class="Navoff">Home</a>
        <a href="01 about foreword.html">About Foreword</a>
        <a href="02 livestream.html">Livestream</a>
        <a href="03 visions.html">Candidates' Visions</a>
@@ -57,12 +45,19 @@
       <div class="Section1">
 
       </div>
-      <div class="Section2pop" onclick="Visionremove()"></div>
-      <div class="Section2_1pop">
-
+      <div class="Section2pop" onclick="Visionremove()">
+        <div class="Section2Text">
+          <h1>Foreword 2022 Candidates</h1>
+          <p id="ChangeID">Click anywhere outside the candidate information panel to exit view mode.</p>
+        </div>
       </div>
-      <div class="Section2_1pop2">
+      <div class="Section2_1pop">
+        <img src="" alt="">
+        <h2>De Guzman, Leody</h2>
+        <h3>Party here</h3>
+        <p>Looking to avenge his dead father after the Battle of New York in 2012, Rexum vows to never again bear witness to atrocities against the good of mankind. As President of The GUIDON Rexum intends to rule with an iron fist. While other leaders lead with fear, Rexum intends to lead with respect. With regards to the current state of order and governance in the organization, Rexum had this to say, “I have never witnessed such injustice as I’ve seen in the corridors and backrooms of Ateneo’s Online Learning Campus since Loki vaporized my father right in front of my eyes on that fateful day in New York in 2012.” This election cycle has been particularly tough as it not only marks the 10th death anniversary of his father, but also the 4th death anniversary of his mother who passed away at the hands of Ebony Maw’s assault on Bleecker St. in 2018.
 
+“If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
       </div>
       <div class="Section2">
         <div class="Section2Text">
@@ -70,39 +65,39 @@
           <p id="ChangeID">Click on the cards to learn more about said candidate and access their campaign infographic</p>
         </div>
         <div class="Section2_1">
-          <div class="Candidate2_1" onclick="Vision1()">
+          <div class="Candidate2_1" onclick="Vision()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision1()">
+          <div class="Candidate2_1" onclick="Vision()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision1()">
+          <div class="Candidate2_1" onclick="Vision()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision2()">
+          <div class="Candidate2_1" onclick="Vision()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision2()">
+          <div class="Candidate2_1" onclick="Vision()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision2()">
+          <div class="Candidate2_1" onclick="Vision()">
             <img src="Images/Cand De Guzman.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
         </div>
       </div>
-      <footer> <!-- Version 1.1 -->
+      <footer class="footer"> <!-- Version 1.2 -->
         <div class="leftfooter">
           <div class="footerimages">
             <img src="Images/Foreword Logo Text.png" alt="">
@@ -110,15 +105,15 @@
           </div>
           <p>Foreword 2022 is a student-led event, with organizers belonging to The GUIDON's Beyond Loyola and Externals Staffs. The GUIDON is conducting this assembly in partnership with the Commission on Elections (COMELEC) and media partner ABS-CBN News Channel (ANC). All outputs pertaining to this event were curated following The GUIDON's editorial independence policies.</p>
           <div class="footericons">
-            <img src="Images/Icon YT.png" alt="">
-            <img src="Images/Icon FB.png" alt="">
-            <img src="Images/Icon IG.png" alt="">
-            <img src="Images/Icon Twitter.png" alt="">
-            <img src="Images/Icon Web.png" alt="">
+            <a href=""><img src="Images/Icon YT.png" alt=""></a>
+            <a href=""><img src="Images/Icon FB.png" alt=""></a>
+            <a href="#"><img src="Images/Icon IG.png" alt=""></a>
+            <a href="#"><img src="Images/Icon Twitter.png" alt=""></a>
+            <a href="#"><img src="Images/Icon Web.png" alt=""></a>
           </div>
         </div>
         <div class="rightfooter">
-          <a href="index.html">Home</a>
+          <a href="index.html" class="Navoff">Home</a>
           <a href="01 about foreword.html">About Foreword</a>
           <a href="02 livestream.html">Livestream</a>
           <a href="03 visions.html">Candidates' Visions</a>

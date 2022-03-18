@@ -55,8 +55,7 @@ p{
   font-family: 'Roboto';
 }
 
-
-/* NAV start ver 1.0 */
+/* NAV start ver 1.2 */
 nav{
   position:fixed;
   top: 0px;
@@ -89,12 +88,18 @@ nav{
 }
 
 .Nav-right a{
-  color: white;
+  color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
 }
 
-.Navoff{
+.Nav-right a:hover{
   color: white;
+}
+
+.Navoff{
+  color: white !important;
+  font-family: "RobotoBold";
+  pointer-events: none;
 }
 
 footer{
@@ -123,7 +128,7 @@ footer{
   margin: 10px 0px;
 }
 
-.footericons img{
+.footericons a img{
   width: 15px;
   margin-right: 20px;
 }
@@ -144,12 +149,16 @@ footer{
   line-height: 16px;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
+}
 
+.rightfooter a:hover{
+  color: white;
 }
 
 main{
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
+
 /* NAV end */
 
 .Section1{
@@ -159,22 +168,28 @@ main{
   background-size: cover;
   color: white;
   box-sizing: border-box;
-  padding: 180px 15%;
+  display: flex;
+  padding: 100px 50px;
 }
 
+.Section1_1{
+  width: 40%;
+  margin: 130px 0px 0px 11%;
+  transition: opacity 0.3s linear;
+  animation: appear 1s;
+  box-sizing: border-box;
+}
 
-.Section1 h1{
+.Section1_1 h1{
   font-size: 37px;
   margin-bottom: 10px;
-  animation: appear 1s;
-  transition: opacity 0.3s linear;
 }
 
-.Section1 p{
+.Section1_1 p{
   font-size: 20px;
 }
 
-.Section1 span{
+.Section1_1 span{
   display: inline-block;
   margin-top: 50px;
   font-size: 40px;
@@ -189,4 +204,29 @@ main{
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
+}
+
+.Section1_2{
+  width: 60%;
+  margin: 80px 0px 0px 0px;
+}
+
+.Section1_2 iframe{
+  width: 89%;
+  height: 378px;
+  opacity: 0;
+  transform: translate(20px);
+  visibility: hidden;
+  transition: opacity 0.3s linear, transform 0.3s linear;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

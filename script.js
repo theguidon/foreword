@@ -47,7 +47,8 @@ window.onscroll = function (e) {
 }
 
 // COUNTER ----------------------
-var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
+// var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
+var countDownDate = new Date("Mar 17, 2022 15:26:00").getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
@@ -65,6 +66,13 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("Countdown").innerHTML = "EXPIRED";
+    document.getElementsByClassName("CountdownClass")[0].innerHTML = "00";
+    document.getElementsByClassName("CountdownClass")[1].innerHTML = ":00";
+    document.getElementsByClassName("CountdownClass")[2].innerHTML = "00";
+    document.getElementsByClassName("CountdownClass")[3].innerHTML = ":00";
+    document.getElementById("livestream").style.visibility = "visible";
+    document.getElementById("livestream").style.opacity = "1";
+    document.getElementById("livestream").style.transform = "translate(0px)";
+
   }
 }, 1000);

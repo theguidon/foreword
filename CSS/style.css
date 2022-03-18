@@ -56,7 +56,7 @@ p{
 }
 
 
-/* NAV start ver 1.1 */
+/* NAV start ver 1.2 */
 nav{
   position:fixed;
   top: 0px;
@@ -100,6 +100,7 @@ nav{
 .Navoff{
   color: white !important;
   font-family: "RobotoBold";
+  pointer-events: none;
 }
 
 footer{
@@ -236,23 +237,30 @@ main{
   background-size: cover;
   color: white;
   box-sizing: border-box;
-  padding: 120px 15%;
+  padding: 20px;
+  display: flex;
 }
 
-.Section2 h1{
+.Section2_1{
+  width: 40%;
+  margin: 110px 0px 0px 11%;
+  transition: opacity 0.3s linear;
+  animation: appear 1s;
+  box-sizing: border-box;
+}
+
+.Section2_1 h1{
   font-size: 37px;
   margin-bottom: 10px;
-  animation: appear 1s;
-  transition: opacity 0.3s linear;
 }
 
-.Section2 p{
+.Section2_1 p{
   font-size: 20px;
 }
 
-.Section2 span{
+.Section2_1 span{
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 40px;
   font-family: "Nexa";
 }
@@ -267,6 +275,20 @@ main{
   text-align: center;
 }
 
+.Section2_2{
+  width: 60%;
+  margin: 80px 0px 0px 0px;
+}
+
+.Section2_2 iframe{
+  width: 89%;
+  height: 378px;
+  opacity: 0;
+  transform: translate(20px);
+  visibility: hidden;
+  transition: opacity 0.3s linear, transform 0.3s linear;
+}
+
 
 .Button{
   border: 2px solid white;
@@ -277,8 +299,12 @@ main{
   font-weight: 400;
   font-size: 12px;
   line-height: 25px;
-  margin: 0px 20px 0px 0px;
+  margin: 0px 20px 10px 0px;
   transition: background-color 0.3s linear;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
 }
 
 .Button:hover{
