@@ -14,6 +14,7 @@
         document.getElementsByClassName("Section2_1pop")[0].style.visibility = "visible";
         document.getElementsByClassName("Section2_1pop")[0].style.opacity = "1";
         document.getElementById('ChangeID').style.color = "#0AA2D1";
+
       }
       function Visionremove() {
         document.getElementsByClassName("Section2pop")[0].style.visibility = "hidden";
@@ -21,6 +22,10 @@
         document.getElementsByClassName("Section2_1pop")[0].style.visibility = "hidden";
         document.getElementsByClassName("Section2_1pop")[0].style.opacity = "0";
         document.getElementById('ChangeID').style.color = "black";
+      }
+      window.onresize = function (e) {
+        document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
@@ -32,10 +37,10 @@
         <a href=""><img class="Home" src="Images/Foreword Logo White.png" alt=""></a>
       </span>
       <span class="Nav-right">
-       <a href="index.html" class="Navoff">Home</a>
+       <a href="index.html">Home</a>
        <a href="01 about foreword.html">About Foreword</a>
        <a href="02 livestream.html">Livestream</a>
-       <a href="03 visions.html">Candidates' Visions</a>
+       <a href="03 visions.html" class="Navoff">Candidates' Visions</a>
        <a href="04 partners.html">Our Partners</a>
        <a href="05 about guidon.html">About The GUIDON</a>
        <a href="06 contactus.html">Contact Us</a>
@@ -43,7 +48,8 @@
     </nav>
     <main>
       <div class="Section1">
-
+        <h1>Candidates' Visions</h1>
+        <p>The top six Presidential candidates will be invited to introduce and discuss their long-term plans, programs, and advocacies for their possible time in office. The event's points of discussion will follow four areas of national interest, namely Basic Needs, Climate Justice, Sustainable Growth, and Citizen Empowerment, which are inspired by the United Nations' 17 Sustainable Development Goals. Explore their visions and learn more about the Philippines they envisage for the next six years.</p>
       </div>
       <div class="Section2pop" onclick="Visionremove()">
         <div class="Section2Text">
@@ -52,12 +58,12 @@
         </div>
       </div>
       <div class="Section2_1pop">
-        <img src="" alt="">
+        <img src="Images/Candidate1.png" alt="">
         <h2>De Guzman, Leody</h2>
         <h3>Party here</h3>
         <p>Looking to avenge his dead father after the Battle of New York in 2012, Rexum vows to never again bear witness to atrocities against the good of mankind. As President of The GUIDON Rexum intends to rule with an iron fist. While other leaders lead with fear, Rexum intends to lead with respect. With regards to the current state of order and governance in the organization, Rexum had this to say, “I have never witnessed such injustice as I’ve seen in the corridors and backrooms of Ateneo’s Online Learning Campus since Loki vaporized my father right in front of my eyes on that fateful day in New York in 2012.” This election cycle has been particularly tough as it not only marks the 10th death anniversary of his father, but also the 4th death anniversary of his mother who passed away at the hands of Ebony Maw’s assault on Bleecker St. in 2018.
-
-“If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
+        <br><br>
+        “If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
       </div>
       <div class="Section2">
         <div class="Section2Text">
@@ -113,10 +119,10 @@
           </div>
         </div>
         <div class="rightfooter">
-          <a href="index.html" class="Navoff">Home</a>
+          <a href="index.html">Home</a>
           <a href="01 about foreword.html">About Foreword</a>
           <a href="02 livestream.html">Livestream</a>
-          <a href="03 visions.html">Candidates' Visions</a>
+          <a href="03 visions.html" class="Navoff">Candidates' Visions</a>
           <a href="04 partners.html">Our Partners</a>
           <a href="05 about guidon.html">About The GUIDON</a>
           <a href="06 contactus.html">Contact Us</a>
@@ -125,7 +131,7 @@
     </main>
     <script type="text/javascript">
       ScrollOut({
-        targets: '.leftfooter, .rightfooter, .FlexitemCandidates'
+        targets: '.leftfooter, .rightfooter, .Candidate2_1'
       })
     </script>
   </body>

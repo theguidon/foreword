@@ -1,6 +1,4 @@
 window.onscroll = function (e) {
-
-  document.getElementsByClassName("twitframe")[0].style.height = document.getElementsByClassName("Topleft3_2")[0].clientHeight + document.getElementsByClassName("Botleft3_2")[0].clientHeight + 40 + "px";
   // console.log(document.getElementsByClassName("left3_2")[0].clientHeight)
   // console.log(window.scrollY)
   if(window.scrollY <= 00){
@@ -45,6 +43,12 @@ window.onscroll = function (e) {
     // document.getElementsByClassName("Section1")[0].style.position = "relative";
   }
 }
+
+// Resize items
+window.onresize = function (e) {
+  document.getElementsByClassName("twitframe")[0].style.height = document.getElementsByClassName("Topleft3_2")[0].clientHeight + document.getElementsByClassName("Botleft3_2")[0].clientHeight + 40 + "px";
+}
+
 
 // COUNTER ----------------------
 // var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
