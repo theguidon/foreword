@@ -163,10 +163,112 @@ main{
 
 .Section1{
   width: 100%;
-  height: 815px;
+  /* height: 815px; */
+  min-height: 1011px;
   background: url("../Images/5 Section1.png");
   background-size: cover;
   color: white;
   box-sizing: border-box;
-  padding: 120px 15%;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.Section1Left{
+  width: 40%;
+  margin-right: 50px;
+}
+
+.Section1Left h1{
+  font-size: 37px;
+  line-height: 56px;
+}
+
+.Section1Left p{
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.Section1Left h3{
+  font-size: 20px;
+  line-height: 23px;
+  margin: 50px 0px 15px;
+}
+
+.Section1Icons a img{
+  width: 25px;
+  margin-right: 20px;
+}
+
+
+.Section1Right{
+  display: flex;
+  justify-content: center;
+}
+
+.Section1Line{
+  height: 640px;
+  width: 0px;
+  border: 1px solid #FFFFFF;
+  margin: 0px 15px;
+}
+
+.Line{
+  height: 0px;
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  margin: 30px auto;
+}
+
+.Section1Rightsub{
+  display: flex;
+  margin: 20px 0px 20px 20px;
+  align-items: flex-end;
+}
+
+.Section1Rightsub img{
+  width: 250px;
+}
+
+.Section1Rightsub0 h2{
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0px 0px 0px 20px;
+}
+
+.Section1Rightsubsub{
+  margin-left: 20px;
+}
+
+.Section1Rightsubsub h1{
+  font-size: 23.0343px;
+  line-height: 35px;
+}
+
+.Section1Rightsubsub p{
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.Button{
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 5px 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  margin: 0px 20px 10px 0px;
+  transition: background-color 0.3s linear;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.Button:hover{
+  background-color: white;
+  color: #2857CE;
 }

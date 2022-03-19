@@ -170,3 +170,72 @@ main{
   box-sizing: border-box;
   padding: 120px 15%;
 }
+
+.Section1 p{
+  width: 900px;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+input[type="email"]{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  width: 500px;
+  height: 40px;
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 15px 0px;
+}
+
+textarea{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  width: 500px;
+  height: 275px;
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+input[type="button"]{
+  background-color: inherit;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 6px 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  transition: background-color 0.3s linear;
+  font-size: 20px;
+  line-height: 23px;
+  width:120px;
+  margin: 15px 0px 0px calc(500px - 120px);
+}
+
+input[type="button"]:hover{
+  background-color: white;
+  color: #2857CE;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(255, 255, 255, 0.8);
+}

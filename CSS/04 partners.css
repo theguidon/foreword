@@ -178,7 +178,101 @@ main{
 
 .Section2{
   width: 100%;
-  height: 815px;
+  /* height: 815px; */
   background: url("../Images/4 Section2.png");
   background-size: cover;
+  padding: 0px 10%;
+  box-sizing: border-box;
+}
+
+.Section2 h1{
+  color: #000E42;
+  font-size: 37px;
+  line-height: 56px;
+  margin: 60px 0px 5px;
+}
+
+.Section2 p{
+  color: #000E42;
+}
+
+.Section1_2sub{
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.Section1_2sub h4{
+  padding: 10px 0px 5px;
+  font-size: 25px;
+  line-height: 38px;
+}
+
+.Section1_2sub img{
+  height: 150px;
+}
+
+.Section1_2sub h3{
+  padding: 8px;
+  font-size: 25px;
+  line-height: 38px;
+}
+
+.Section2_1{
+  display: flex;
+  justify-content:  space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.Line{
+  height: 0px;
+  width: 100%;
+  border: 3px solid #E5E5E5;
+  margin: 10px auto;
+}
+
+.Section2_1 img{
+  width: 180px;
+  padding: 20px 20px 20px 0px;
+  margin: auto;
+
+}
+
+.Section2_1 p{
+  width: 80%;
+  /* width: 800px; */
+  box-sizing: border-box;
+  padding: 20px;
+  margin: auto;
+}
+
+.Section2_2{
+  display: flex;
+  justify-content:  space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 10px 0px 50px;
+}
+
+.Section2_2 img{
+  width: 108px;
+  height: 108px;
+}
+
+.Section2_2sub{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+}
+
+.Section2_2sub p{
+  width: 75%;
+  font-size: 12px;
+  line-height: 14px;
 }
