@@ -4,10 +4,30 @@
     <meta charset="utf-8">
     <title>Candidates' Visions</title>
     <link rel="stylesheet" href="CSS/03 visions.css">
-    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
+      // Mobile Nav Version 1.1
+      function navopen() {
+        document.getElementsByClassName('Modal')[0].style.visibility = "visible";
+        document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
+        document.getElementsByClassName('MenuItems')[0].style.visibility = "visible";
+        document.getElementsByClassName('MenuItems')[0].style.transform = "translate(0px)";
+      }
+      function navclose() {
+        document.getElementsByClassName('Modal')[0].style.visibility = "hidden";
+        document.getElementsByClassName('Modal')[0].style.opacity = "0";
+        document.getElementsByClassName('MenuItems')[0].style.visibility = "hidden";
+        document.getElementsByClassName('MenuItems')[0].style.transform = "translate(60%)";
+      }
+      window.onresize = function (e) {
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+      }
+      window.onload = function (e) {
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+      }
+      // END OF NAV
       function Vision() {
         document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
         document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
@@ -25,7 +45,6 @@
       }
       window.onresize = function (e) {
         document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
-        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
       window.onload = function (e) {
         document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
@@ -35,11 +54,14 @@
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 1.2 -->
+    <nav> <!-- Version 1.3 -->
       <span class="Nav-left">
-        <a href=""><img class="Home" src="Images/Foreword Logo White.png" alt=""></a>
+        <a href="">
+          <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
+          <img class="Home2 mob" src="Images/Foreword Logo C.png" alt="">
+        </a>
       </span>
-      <span class="Nav-right">
+      <span class="Nav-right nomob">
        <a href="index.html">Home</a>
        <a href="01 about foreword.html">About Foreword</a>
        <a href="02 livestream.html">Livestream</a>
@@ -48,7 +70,21 @@
        <a href="05 about guidon.html">About The GUIDON</a>
        <a href="06 contactus.html">Contact Us</a>
       </span>
+      <img class="Navimage mob" src="Images/Navburger.png" alt="" onclick="navopen()">
     </nav>
+    <div class="Modal mob" onclick="navclose()">
+
+    </div>
+    <div class="MenuItems mob">
+      <a href="index.html">Home</a>
+      <a href="01 about foreword.html">About Foreword</a>
+      <a href="02 livestream.html">Livestream</a>
+      <a href="03 visions.html" class="Navoff">Candidates' Visions</a>
+      <a href="04 partners.html">Our Partners</a>
+      <a href="05 about guidon.html">About The GUIDON</a>
+      <a href="06 contactus.html">Contact Us</a>
+    </div>
+    <!-- End of Nav -->
     <main style="margin-top:50px;">
       <div class="Section1">
         <h1>Candidates' Visions</h1>
@@ -106,7 +142,7 @@
           </div>
         </div>
       </div>
-      <footer class="footer"> <!-- Version 1.2 -->
+      <footer class="footer"> <!-- Version 1.3 -->
         <div class="leftfooter">
           <div class="footerimages">
             <img src="Images/Foreword Logo Text.png" alt="">
@@ -121,7 +157,7 @@
             <a href="#"><img src="Images/Icon Web.png" alt=""></a>
           </div>
         </div>
-        <div class="rightfooter">
+        <div class="rightfooter nomob">
           <a href="index.html">Home</a>
           <a href="01 about foreword.html">About Foreword</a>
           <a href="02 livestream.html">Livestream</a>

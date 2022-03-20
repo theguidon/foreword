@@ -246,3 +246,95 @@ textarea{
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* MOBILE NAV start ver 1.2 */
+.mob{
+  display: none;
+}
+
+@media screen and (max-width:1000px){
+
+.mob{
+  display: inherit;
+}
+
+.nomob{
+  display: none;
+}
+
+nav{
+  background-color: white;
+  padding: 5px;
+}
+
+.Home2{
+  width: 50px;
+  height: 50px !important;
+  float: left;
+  padding: 10px 10px;
+}
+
+.Navimage{
+  width: 30px;
+  height: 30px;
+  float: right;
+  padding: 20px 10px;
+}
+
+.Modal{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 1000px;
+  background-color: gray;
+  z-index: 11;
+  opacity: 0.5;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.MenuItems{
+  position: fixed;
+  top: 0px;
+  width: 60%;
+  right: 0px;
+  height: 1000px;
+  background-color: white;
+  z-index: 12;
+  padding-top: 140px;
+  visibility: hidden;
+  transform: translate(60%);
+  transition: transform 0.2s linear, visibility 0.2s linear;
+}
+
+.MenuItems a{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 10px 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.Navoff{
+  background: #2857CE;
+  box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.Line{
+  border: 1px solid #E5E5E5;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.leftfooter{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+/* END OF NAV */
+
+}

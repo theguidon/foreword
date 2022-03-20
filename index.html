@@ -4,19 +4,43 @@
     <meta charset="utf-8">
     <title>Foreword Home</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <script src="script.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      // Mobile Nav Version 1.1
+      function navopen() {
+        document.getElementsByClassName('Modal')[0].style.visibility = "visible";
+        document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
+        document.getElementsByClassName('MenuItems')[0].style.visibility = "visible";
+        document.getElementsByClassName('MenuItems')[0].style.transform = "translate(0px)";
+      }
+      function navclose() {
+        document.getElementsByClassName('Modal')[0].style.visibility = "hidden";
+        document.getElementsByClassName('Modal')[0].style.opacity = "0";
+        document.getElementsByClassName('MenuItems')[0].style.visibility = "hidden";
+        document.getElementsByClassName('MenuItems')[0].style.transform = "translate(60%)";
+      }
+      window.onresize = function (e) {
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+      }
+      window.onload = function (e) {
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+      }
+      // END OF NAV
+    </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 1.2 -->
+    <nav> <!-- Version 1.3 -->
       <span class="Nav-left">
-        <a href=""><img class="Home" src="Images/Foreword Logo White.png" alt=""></a>
+        <a href="">
+          <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
+          <img class="Home2 mob" src="Images/Foreword Logo C.png" alt="">
+        </a>
       </span>
-      <span class="Nav-right">
+      <span class="Nav-right nomob">
        <a href="index.html" class="Navoff">Home</a>
        <a href="01 about foreword.html">About Foreword</a>
        <a href="02 livestream.html">Livestream</a>
@@ -25,11 +49,27 @@
        <a href="05 about guidon.html">About The GUIDON</a>
        <a href="06 contactus.html">Contact Us</a>
       </span>
+      <img class="Navimage mob" src="Images/Navburger.png" alt="" onclick="navopen()">
     </nav>
-    <main id="main" onscroll="myFunction()">
+    <div class="Modal mob" onclick="navclose()">
+
+    </div>
+    <div class="MenuItems mob">
+      <a href="index.html" class="Navoff">Home</a>
+      <a href="01 about foreword.html">About Foreword</a>
+      <a href="02 livestream.html">Livestream</a>
+      <a href="03 visions.html">Candidates' Visions</a>
+      <a href="04 partners.html">Our Partners</a>
+      <a href="05 about guidon.html">About The GUIDON</a>
+      <a href="06 contactus.html">Contact Us</a>
+    </div>
+    <!-- End of Nav -->
+
+    <main id="main">
       <div class="Space"></div>
       <div class="Section1">
-        <img class="section1interactive" src="Images/Section1.png" style="width: 100%;">
+        <img class="section1interactive nomob" src="Images/Section1.png" style="width: 100%;">
+        <img src="Images/Section1mob.png" class="section1interactive mob" style="width: 150%;">
         <div class="Section1Content">
           <img src="Images/Foreword Logo.png" alt="">
           <h1>Foreword 2022</h1>
@@ -43,21 +83,24 @@
           <p>Watch The Presidential Cadidates' Asembly</p>
           <p>Live here on this page on</p>
           <h3>April 2, 2022 | 4:00 PM to 7:00 PM</h3>
-          <div id="Countdown" style="width:200px">
+          <div id="Countdown" class="" style="width:200px">
             <div><span class="CountdownClass">00</span>DAYS</div>
             <div><span class="CountdownClass">:00:</span>HOURS</div>
             <div><span class="CountdownClass">00</span>MINS</div>
             <div style="width:70px;"><span class="CountdownClass" style="width:70px; text-align:left;">:00&nbsp</span>SECS</div>
             <!-- &nbsp;&nbsp;DAYS&nbsp;&nbsp;&nbsp; HOURS&nbsp;&nbsp; MINS&nbsp;&nbsp;&nbsp;&nbsp; SECS -->
           </div>
-          <a href="https://www.youtube.com/user/TheGuidon" target="_blank" class="Button"><img src="Images/Icon YT.png" alt=""> Watch on YouTube</a>
-          <a href="https://www.facebook.com/TheGUIDON" target="_blank" class="Button"><img src="Images/Icon FB.png" alt=""> Watch on Facebook</a>
+          <a href="https://www.youtube.com/user/TheGuidon" target="_blank" class="Button nomob"><img src="Images/Icon YT.png" alt=""> Watch on YouTube</a>
+          <a href="https://www.facebook.com/TheGUIDON" target="_blank" class="Button nomob"><img src="Images/Icon FB.png" alt=""> Watch on Facebook</a>
         </div>
         <div class="Section2_2">
-          <iframe id="livestream" src="https://www.youtube.com/embed/sv3TXMSv6Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="" id="livestream" src="https://www.youtube.com/embed/sv3TXMSv6Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/user/TheGuidon" target="_blank" class="Button mob"><img src="Images/Icon YT.png" alt=""> Watch on YouTube</a>
+          <a href="https://www.facebook.com/TheGUIDON" target="_blank" class="Button mob"><img src="Images/Icon FB.png" alt=""> Watch on Facebook</a>
         </div>
 
       </div>
+      <div class="Line mob"></div>
       <div class="Section3">
         <div class="Section3_1">
           <h1>Meet The Candidates</h1>
@@ -125,9 +168,12 @@
           </div>
           <a href="03 visions.html" class="LearnMore">Learn More About The Candidates</a>
         </div>
+        <div class="Line mob"></div>
         <div class="Section3_2">
+          <h1 class="mob">Event Mechanics Primer</h1>
+          <p class="mob">Watch our video explaining the mechanics of the event</p>
           <div class="left3_2">
-            <div class="Topleft3_2">
+            <div class="Topleft3_2 nomob">
               <img src="Images/0 Section3_1.png" alt="">
               <p>The GUIDON’s Foreword 2022: The Presidential Candidates’ Assembly is an event that will present the Presidential candidates to the Filipino voters—especially the youth—for the upcoming 2022 elections.</p>
               <a href="01 about foreword.html" class="LearnMore">Learn More About Foreword 2022</a>
@@ -137,16 +183,21 @@
             </div>
             <!-- <a href="#" class="LearnMore BotLM">Watch on YouTube</a> -->
           </div>
+          <div class="Line mob"></div>
           <div class="right3_2">
+            <h1 class="mob">Event Tweets</h1>
+            <p class="mob">Hear all the latest on Twitter about #Foreword2022</p>
             <div class="twitframe" style="height:0px;">
               <a class="twitter-timeline" href="https://twitter.com/TheGUIDON?ref_src=twsrc%5Etfw">Tweets by TheGUIDON</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
+            <a href="https://twitter.com/TheGUIDON" class="twitmore LearnMore mob">View on Twitter</a>
+
             <!-- <a href="#" class="LearnMore">More Tweets</a> -->
           </div>
         </div>
 
       </div>
-      <footer class="footer"> <!-- Version 1.2 -->
+      <footer class="footer"> <!-- Version 1.3 -->
         <div class="leftfooter">
           <div class="footerimages">
             <img src="Images/Foreword Logo Text.png" alt="">
@@ -161,7 +212,7 @@
             <a href="#"><img src="Images/Icon Web.png" alt=""></a>
           </div>
         </div>
-        <div class="rightfooter">
+        <div class="rightfooter nomob">
           <a href="index.html" class="Navoff">Home</a>
           <a href="01 about foreword.html">About Foreword</a>
           <a href="02 livestream.html">Livestream</a>
