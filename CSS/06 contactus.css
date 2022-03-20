@@ -205,13 +205,13 @@ textarea{
   resize: none;
 }
 
-input[type="button"]{
+#submit{
   background-color: inherit;
   border: 2px solid white;
   color: white;
   text-decoration: none;
   border-radius: 25px;
-  padding: 6px 20px;
+  padding: 6px 0px;
   font-weight: 400;
   font-size: 12px;
   line-height: 25px;
@@ -220,11 +220,18 @@ input[type="button"]{
   line-height: 23px;
   width:120px;
   margin: 15px 0px 0px calc(500px - 120px);
+  text-align: center;
 }
 
-input[type="button"]:hover{
-  background-color: white;
-  color: #2857CE;
+.subhover:hover{
+  background-color: white !important;
+  color: #2857CE !important;
+}
+
+.submitted{
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 0px !important;
+  color: white !important;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

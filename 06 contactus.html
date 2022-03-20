@@ -11,6 +11,10 @@
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
+      function Load(){
+        document.getElementById('submit').value = "Loading...";
+        document.getElementById('submit').classList.remove("subhover");
+      }
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
@@ -32,12 +36,15 @@
     </nav>
     <main style="margin-top:50px;">
       <div class="Section1">
-        <h1>Contact Us</h1>
-        <p>What would you like to ask the top six presidential candidates? Do you have any other suggestions that you would like to raise? Ano ang gusto mong itanong sa anim na nangungunang kandidato sa pagka-Presidente? Mayroon ka pa bang ibang suhestiyon na nais ibahagi?</p>
-        <input type="email" name="" placeholder="Email Address" value="">
-        <!-- <input type="text" name="" value=""> -->
-        <textarea name="name" rows="8" cols="80" placeholder="Type question here..."></textarea>
-        <input type="button" name="" value="Submit">
+        <form class="gform" action="https://script.google.com/macros/s/AKfycbzuuJRL6AoSY0t3zGy1l7HTAkcsO7lBkHS6XkX-IgSfTBZPfooUd1WW92L1g10aOjfzcA/exec" method="post">
+          <h1>Contact Us</h1>
+          <p>What would you like to ask the top six presidential candidates? Do you have any other suggestions that you would like to raise? Ano ang gusto mong itanong sa anim na nangungunang kandidato sa pagka-Presidente? Mayroon ka pa bang ibang suhestiyon na nais ibahagi?</p>
+          <input type="email" name="Email" placeholder="Email Address" value="">
+          <!-- <input type="text" name="" value=""> -->
+          <textarea name="Text" rows="8" cols="80" placeholder="Type question here..."></textarea>
+          <input class="subhover" id="submit" type="submit" name="" value="Submit" onclick="Load()">
+        </form>
+        <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
       </div>
       <footer class="footer"> <!-- Version 1.2 -->
         <div class="leftfooter">
