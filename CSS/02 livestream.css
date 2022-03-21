@@ -321,4 +321,81 @@ nav{
 
 /* END OF NAV */
 
+.Section1{
+  display: inline-block;
+  padding: 0px;
+  height: auto;
+  min-height: 716px;
+  background-image: url("../Images/2 Section1mob.png")
+}
+
+.Section1_1{
+  width: 100%;
+  margin: 200px 0px 0px;
+  padding: 0px 30px;
+  overflow: hidden;
+}
+
+.Section1_1 p{
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.CountdownClass{
+  margin-top: 0px !important;
+}
+
+#Countdown{
+  color: white;
+  justify-content: flex-start;
+  margin: 50px 0px 0px;
+}
+
+.Section1_2{
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+  padding-bottom: 56.25%;
+  /* transform: translateY(-190px); */
+}
+
+.Section1_2 iframe{
+  height: 0px;
+  margin: 20px;
+  transition: height 0.5s;
+}
+
+.Button{
+  /* border: 2px solid white; */
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  margin: 0px 10px 10px 10px;
+  transition: background-color 0.3s linear;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.Button img{
+  height: 20px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.but1{
+  background-color: #C60000;
+}
+
+.but2{
+  background-color: #4267B2;
+}
+
+
+
 }

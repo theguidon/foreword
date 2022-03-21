@@ -57,7 +57,7 @@ window.onload = function (e) {
 
 // COUNTER ----------------------
 // var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
-var countDownDate = new Date("Mar 20, 2022 22:24:00").getTime();
+var countDownDate = new Date("Mar 21, 2022 11:59:00").getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
@@ -85,12 +85,14 @@ var x = setInterval(function() {
     if (document.body.clientWidth < 976) {
       document.getElementById("Countdown").style.height = "0px";
       document.getElementById("Countdown").style.opacity = "0";
-      document.getElementById("livestream").style.height = "200px";
+      document.getElementById("livestream").style.height = "300px";
+      document.getElementsByClassName("Section1_1")[0].style.height = "40px";
     }
     else {
       document.getElementById("Countdown").style.height = "100px";
       document.getElementById("Countdown").style.opacity = "1";
       document.getElementById("livestream").style.height = "378px";
+      document.getElementsByClassName("Section1_1")[0].style.height = "auto";
     }
 
   }
