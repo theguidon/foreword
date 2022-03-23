@@ -23,8 +23,10 @@
       }
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+        document.getElementsByClassName("twitframe")[0].style.height = document.getElementsByClassName("Topleft3_2")[0].clientHeight + document.getElementsByClassName("Botleft3_2")[0].clientHeight + 40 + "px";
       }
       window.onload = function (e) {
+        document.getElementsByClassName("twitframe")[0].style.height = document.getElementsByClassName("Topleft3_2")[0].clientHeight + document.getElementsByClassName("Botleft3_2")[0].clientHeight + 40 + "px";
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
       // END OF NAV
@@ -67,6 +69,8 @@
 
     <main id="main">
       <div class="Space"></div>
+      <div class="Section1_1"></div>
+      <!-- Empty div to fix js ^ -->
       <div class="Section1">
         <img class="section1interactive nomob" src="Images/Section1.png" style="width: 100%;">
         <img src="Images/Section1mob.png" class="section1interactive mob" style="width: 150%;">

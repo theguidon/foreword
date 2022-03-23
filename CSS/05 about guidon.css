@@ -176,7 +176,7 @@ main{
 
 .Section1Left{
   width: 40%;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .Section1Left h1{
@@ -223,7 +223,7 @@ main{
 .Section1Rightsub{
   display: flex;
   margin: 20px 0px 20px 20px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .Section1Rightsub img{
@@ -247,8 +247,9 @@ main{
 
 .Section1Rightsubsub p{
   margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 15px;
+  line-height: 15px;
+  width: 200px;
 }
 
 .Button{
@@ -362,5 +363,67 @@ nav{
 }
 
 /* END OF NAV */
+.Section1{
+  width: 100%;
+  padding: 150px inherit 150px;
+  background-image: url("../Images/5 Section1mob.png");
+  background-position: center;
+  min-height: 700px;
+}
+
+.Section1 h1{
+  font-size: 29px;
+  line-height: 44px;
+}
+
+.Section1 p{
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.Section1Left{
+  width: 100%;
+  margin: 0px auto;
+}
+
+.Section2{
+  padding: 30px 10px;
+  text-align: center;
+  color: #000E42;
+}
+
+.Section2 h3{
+  font-size: 14px;
+  line-height: 16px;
+  padding: 5px 30px 10px;
+}
+
+.Section1Rightsub{
+  margin: 10px 0px 10px 10px;
+}
+
+.Section1Rightsub img{
+  width: 45%;
+}
+
+.Section1Rightsubsub{
+  color: #2857CE;
+  text-align: left;
+}
+
+.Section1Rightsubsub p{
+  width: 100%;
+}
+
+.Line{
+  margin: 0px;
+  border: 1px solid #2857CE;
+}
+
+.Section2 h4{
+  font-size: 14px;
+  line-height: 16px;
+  padding: 15px 30px 10px;
+}
 
 }

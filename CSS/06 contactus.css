@@ -336,5 +336,38 @@ nav{
 }
 
 /* END OF NAV */
+.Section1{
+  width: 100%;
+  padding: 100px 40px 10px;
+  background-image: url("../Images/6 Section1mob.png");
+  background-position: center;
+}
+
+.Section1 h1{
+  font-size: 29px;
+  line-height: 44px;
+}
+
+.Section1 p{
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+}
+
+.gform input, .gform textarea{
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea{
+  padding-top: 17px;
+}
+
+#submit{
+  position: absolute;
+  right: 40px;
+}
 
 }

@@ -23,32 +23,58 @@
       }
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+        document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
+
       }
       window.onload = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+        document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
+
       }
       // END OF NAV
-      function Vision() {
+      function Vision(candnumber) {
         document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
         document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
         document.getElementsByClassName("Section2_1pop")[0].style.visibility = "visible";
         document.getElementsByClassName("Section2_1pop")[0].style.opacity = "1";
+        document.getElementsByClassName("Section2_1mobpop")[0].style.visibility = "visible";
+        document.getElementsByClassName("Section2_1mobpop")[0].style.opacity = "1";
         document.getElementById('ChangeID').style.color = "#0AA2D1";
-
+        // document.getElementsByTagName('main')[0].style.height = "50px";
+        change_cand(candnumber);
       }
       function Visionremove() {
         document.getElementsByClassName("Section2pop")[0].style.visibility = "hidden";
         document.getElementsByClassName("Section2pop")[0].style.opacity = "0";
         document.getElementsByClassName("Section2_1pop")[0].style.visibility = "hidden";
         document.getElementsByClassName("Section2_1pop")[0].style.opacity = "0";
+        document.getElementsByClassName("Section2_1mobpop")[0].style.visibility = "hidden";
+        document.getElementsByClassName("Section2_1mobpop")[0].style.opacity = "0";
         document.getElementById('ChangeID').style.color = "black";
+        // document.getElementsByTagName('main')[0].style.height = "auto";
       }
-      window.onresize = function (e) {
-        document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
+      function change_cand(candnumber){
+
+
+        var candinfo = [
+        ["Leody De Guzman", "Leodegario \"Ka Leody\" Quitain de Guzman  born July 25, 1959) is a Filipino progressivist, unionist and labor rights activist. He was the former president and currently the chairperson of the Bukluran ng Manggagawang Pilipino, a socialist federation of militant trade unions. He was an aspirant in the 2019 senatorial elections, and is a candidate for the 2022 Philippine presidential elections under the Partido Lakas ng Masa.<br><br>De Guzman became involved in activism due to the aftermath of the assassination of popular anti-Marcos figure Benigno Aquino Jr. Galvanized by the wave of pro-democratic, anti-Marcos opposition protests that ensued, he joined the \"Tarlac to Tarmac\" march as well as other protests. He led the Aris Philippines branch of the budding Justice for Aquino, Justice for All (JAJA) movement.<br><br>De Guzman also became involved in organizing the workers of the factory against the dominant union and would become an organizer for Alyansa ng mga Manggagawa sa Pasig (ALMAPAS), a major labor coalition, from 1984 to 1990.<br><br>De Guzman was elected to the regional executive council of the militant labor federation Kilusang Mayo Uno (KMU) in 1991. However, because of increasing differences between KMU NCR and KMU national leadership, De Guzman joined other workers in forming an alternative labor federation, the Bukluran ng Manggagawang Pilipino (BMP)[5] alongside labor leaders such as Romy Castillo, Filemon 'Ka Popoy' Lagman, and Victor Briz. He was elected deputy secretary general of BMP at its formation in 1993, serving until 1996.", "Images/Candidate1mob.png", "BackgroundImagelink"],
+        ["Manny Pacquiao", "Emmanuel Dapidran Pacquiao Sr., born December 17, 1978, is a Filipino politician and former professional boxer. Nicknamed \"PacMan\", he is regarded as one of the greatest professional boxers of all time. He has been serving as a senator of the Philippines since 2016.<br><br>Pacquiao is the only eight-division world champion in the history of boxing and has won twelve major world titles. He was the first boxer to win the lineal championship in five different weight classes, the first boxer to win major world titles in four of the eight \"glamour divisions\" (flyweight, featherweight, lightweight, and welterweight), and is the only boxer to hold world championships across four decades (1990s, 2000s, 2010s, and 2020s). In July 2019, Pacquiao became the oldest welterweight world champion in history at the age of 40, and the first boxer in history to become a recognized four-time welterweight champion after defeating Keith Thurman to win the WBA (Super) welterweight title. As of 2015, Pacquiao's fights had generated $1.2 billion in revenue from his 25 pay-per-view bouts. According to Forbes, he was the second highest paid athlete in the world in 2015.<br><br>Pacquiao entered politics in 2010 when he was elected as the representative of Sarangani. He held this post for six years until he was elected and assumed office as a senator in 2016. He became the president of his party PDP–Laban in 2020 (which is disputed since 2021). On September 19, 2021, Pacquiao officially declared his candidacy for President of the Philippines in the 2022 Philippine presidential election. His plan to expand his political career led to his retirement from professional boxing 10 days later.", "Images/Candidate2mob.png", "BackgroundImagelink"],
+        ["Leni Robredo", "Maria Leonor \"Leni\" Gerona Robredo (born Maria Leonor Santo Tomas Gerona; April 23, 1965) is a Filipino lawyer, politician, and social activist who is the 14th and incumbent vice president of the Philippines. Robredo was the wife of the late interior secretary Jesse Robredo. She served as the representative of Camarines Sur's 3rd district from 2013 until her inauguration as vice president in 2016. In the vice presidential election, Robredo defeated Bongbong Marcos by a narrow margin of 263,473 votes. A report released by the Supreme Court further widened her lead to 278,566 over Marcos.<br><br>Robredo is the second woman to serve as vice president of the Philippines after Gloria Macapagal Arroyo and the first vice president from Bicol Region. In 2016, Robredo was awarded by the government of Thailand for her work and advocacy in women's empowerment and gender equality. Under her leadership, the Office of the Vice President also received the ISO 9001: 2015 certification for the office's quality management systems.<br><br>On October 7, 2021, Robredo announced her bid for presidency in the 2022 election.", "Images/Candidate3mob.png", "BackgroundImagelink"],
+        ["Bongbong Marcos", "Having been in public service for over 25 years, Ferdinand “Bongbong” Marcos Jr. has achieved a distinguished career in government. His electoral journey has allowed him to serve in several positions in both the executive and legislative branches of government. His various stints in government have allowed him to carve his niche in the Philippine’s rich political history.<br><br>As a young boy in Manila, Bongbong went to Institucion Teresiana and La Salle Greenhills in Manila where he obtained his kindergarten and elementary education, respectively. Due to his parents’ insistence that he grow up grounded without being overwhelmed by his family’s stature, Bongbong was sent to England where he lived and studied in an all-boys Benedictine abbey, Worth School. Thereafter, he pursued his undergraduate degree, graduating with a Special Diploma in Social Studies from Oxford University in England.<br><br>In his desire to pursue further studies, Bongbong took up Masters in Business Administration in Wharton School of Business, University of Pennsylvania in Philadelphia, USA. Though he felt privileged to enter such an esteemed institution, he had to cut his studies short because he was elected Vice-Governor of the province of Ilocos Norte in 1981, at a young age of 23. He succeeded as Governor of the province from 1983 to 1986.", "Images/Candidate4mob.png", "BackgroundImagelink"],
+        ["Ping Lacson", "Senator Panfilo “Ping” Morena Lacson, who has been circumspect in matters of public interest and committed against various forms of corruption in his more than 50 years of public service in the fields of law enforcement, lawmaking, and humanitarian work.<br><br>Lacson is an untiring, tenacious watchdog of the national budget, making sure dubious congressional insertions (a.k.a. pork barrel) and useless appropriations are checked and deleted during plenary debates. His continuous fight against corruption, including pork barrel in all its iterations, earned him the degree of Doctor of Laws, Honoris Causa, from the Pamantasan ng Lungsod ng Maynila in March 2019.<br><br>On Feb. 19, 2022, Lacson received from his Alma Mater, the Philippine Military Academy, the Lifetime Achievement Award in recognition of his \"more than 50 years of dedicated, exemplary and unblemished service to the country characterized by his faithful adherence to the virtues of Courage, Loyalty and Integrity.\"<br><br>Lacson first earned a tough, no-nonsense reputation while serving in the Philippine National Police: solving high-profile crimes including kidnap-for-ransom cases in the 1980s and 1990s; and reviving the PNP’s glory days as Chief, PNP from 1999 to 2001.<br><br>During his term as PNP Chief, Lacson led by example as he instituted a no-take policy and a fitness program, while cleansing the police force of \“scalawags in uniform\” (a.k.a. kotong cops) – initiatives that earned the PNP the highest public approval ratings in its history.", "Images/Candidate5mob.png", "BackgroundImagelink"],
+        ["Isko Moreno", 'Francisco “Isko” Moreno Domagoso (born October 24, 1974), is a Filipino politician and actor currently serving as the 22nd mayor of Manila since 2019.<br><br>Before heading the capital of the Philippines, he first gained notability as an actor and television personality. He entered politics in 1998, and ran for city councilor and was elected for three consecutive terms. In 2007, he ran as vice mayor of Manila and was elected for three consecutive terms. In 2016, He was term-limited as vice mayor and unsuccessfully ran for senator in the 2016 senatorial elections. He placed 16th out of 50 candidates. He then served in the Duterte cabinet as social welfare undersecretary for a few months in 2018 before running and being elected mayor of Manila in a landslide victory against his former allies Joseph Estrada and Alfredo Lim in the 2019 local elections.<br><br>Moreno has described his leadership style as akin to that of his predecessor Alfredo Lim, citing their shared commitment in reducing crime and maintaining cleanliness of the capital. Moreno is also noted for his streetwise public image due to his use of colorful language coupled with Manila street slang. As a result, he was catapulted into prominence and is colloquially referred to as Yorme, a verlan backslang metathesis of the English word, mayor, used in Taglish and reversed phonemically as part of Filipino/Tagalog street slang. Whether the word is Tagalog or Taglish, it is the way of reversing or jumbling of syllables so as to create local colloquial words.<br><br>On September 22, 2021, Moreno announced his bid for the Philippine presidency in the 2022 election.', "Images/Candidate6mob.png", "BackgroundImagelink"]]
+
+        candnumber = (candnumber + candinfo.length) % candinfo.length;
+        console.log(candnumber);
+        document.getElementsByClassName('popimg')[0].src = candinfo[candnumber][2];
+        document.getElementById('changename').innerHTML = candinfo[candnumber][0];
+        document.getElementById('changedes').innerHTML = candinfo[candnumber][1];
+        document.getElementById('imgleft').setAttribute( "onClick", "change_cand(" + (candnumber - 1) + ")" );
+        document.getElementById('imgright').setAttribute( "onClick", "change_cand(" + (candnumber + 1) + ")" );
+
+
       }
-      window.onload = function (e) {
-        document.getElementsByClassName("Section2pop")[0].style.height = document.getElementsByClassName("Section2")[0].clientHeight + "px";
-      }
+
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
@@ -90,54 +116,74 @@
         <h1>Candidates' Visions</h1>
         <p>The top six Presidential candidates will be invited to introduce and discuss their long-term plans, programs, and advocacies for their possible time in office. The event's points of discussion will follow four areas of national interest, namely Basic Needs, Climate Justice, Sustainable Growth, and Citizen Empowerment, which are inspired by the United Nations' 17 Sustainable Development Goals. Explore their visions and learn more about the Philippines they envisage for the next six years.</p>
       </div>
-      <div class="Section2pop" onclick="Visionremove()">
+      <div class="Section2pop nomob" onclick="Visionremove()">
         <div class="Section2Text">
-          <h1>Foreword 2022 Candidates</h1>
+          <h1 class="mob">The Presidential Candidates</h1>
+          <h1 class="nomob">Foreword 2022 Candidates</h1>
           <p id="ChangeID">Click anywhere outside the candidate information panel to exit view mode.</p>
         </div>
       </div>
-      <div class="Section2_1pop">
-        <img src="Images/Candidate1.png" alt="">
-        <h2>De Guzman, Leody</h2>
-        <h3>Party here</h3>
-        <p>Looking to avenge his dead father after the Battle of New York in 2012, Rexum vows to never again bear witness to atrocities against the good of mankind. As President of The GUIDON Rexum intends to rule with an iron fist. While other leaders lead with fear, Rexum intends to lead with respect. With regards to the current state of order and governance in the organization, Rexum had this to say, “I have never witnessed such injustice as I’ve seen in the corridors and backrooms of Ateneo’s Online Learning Campus since Loki vaporized my father right in front of my eyes on that fateful day in New York in 2012.” This election cycle has been particularly tough as it not only marks the 10th death anniversary of his father, but also the 4th death anniversary of his mother who passed away at the hands of Ebony Maw’s assault on Bleecker St. in 2018.
-        <br><br>
-        “If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
+      <div class="Section2_1mobpop">
+        <div class="Section2_1pop">
+          <div class="S2_1imgflex">
+            <div class="S2_1_1imgflex mob">
+              <img class="img1" src="Images/Icon X.png" alt="" onclick="Visionremove()">
+              <img id="imgleft" class="img2" src="Images/Icon left.png" onclick="change_cand(1)" alt="">
+            </div>
+            <div class="S2_1_2imgflex">
+              <img class="popimg mob" src="Images/Candidate1.png" alt="">
+              <img class="popimg nomob" src="Images/Candidate1mob.png" alt="">
+            </div>
+            <div class="S2_1_3imgflex mob">
+              <img class="img3 phase2" src="Images/Icon I.png" alt="">
+              <img id="imgright" class="img4" src="Images/Icon right.png" onclick="change_cand(2)" alt="">
+            </div>
+          </div>
+
+          <h2 id="changename">De Guzman, Leody</h2>
+          <h3 class="nomob">Party here</h3>
+          <p id="changedes">Looking to avenge his dead father after the Battle of New York in 2012, Rexum vows to never again bear witness to atrocities against the good of mankind. As President of The GUIDON Rexum intends to rule with an iron fist. While other leaders lead with fear, Rexum intends to lead with respect. With regards to the current state of order and governance in the organization, Rexum had this to say, “I have never witnessed such injustice as I’ve seen in the corridors and backrooms of Ateneo’s Online Learning Campus since Loki vaporized my father right in front of my eyes on that fateful day in New York in 2012.” This election cycle has been particularly tough as it not only marks the 10th death anniversary of his father, but also the 4th death anniversary of his mother who passed away at the hands of Ebony Maw’s assault on Bleecker St. in 2018.
+          <br><br>
+          “If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
+        </div>
+        <div class="Empty"></div>
       </div>
+
       <div class="Section2">
         <div class="Section2Text">
-          <h1>Foreword 2022 Candidates</h1>
+          <h1 class="mob">The Presidential Candidates</h1>
+          <h1 class="nomob">Foreword 2022 Candidates</h1>
           <p id="ChangeID">Click on the cards to learn more about said candidate and access their campaign infographic</p>
         </div>
         <div class="Section2_1">
-          <div class="Candidate2_1" onclick="Vision()">
-            <img src="Images/Cand De Guzman.png" alt="">
+          <div class="Candidate2_1" onclick="Vision(0)">
+            <img src="Images/Candidate1.png" alt="">
             <h2>De Guzman, Leody</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision()">
-            <img src="Images/Cand De Guzman.png" alt="">
-            <h2>De Guzman, Leody</h2>
+          <div class="Candidate2_1" onclick="Vision(1)">
+            <img src="Images/Candidate2.png" alt="">
+            <h2>Manny Pacquiao</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision()">
-            <img src="Images/Cand De Guzman.png" alt="">
-            <h2>De Guzman, Leody</h2>
+          <div class="Candidate2_1" onclick="Vision(2)">
+            <img src="Images/Candidate3.png" alt="">
+            <h2>Leni Robredo</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision()">
-            <img src="Images/Cand De Guzman.png" alt="">
-            <h2>De Guzman, Leody</h2>
+          <div class="Candidate2_1" onclick="Vision(3)">
+            <img src="Images/Candidate4.png" alt="">
+            <h2>Bongbong Marcos</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision()">
-            <img src="Images/Cand De Guzman.png" alt="">
-            <h2>De Guzman, Leody</h2>
+          <div class="Candidate2_1" onclick="Vision(4)">
+            <img src="Images/Candidate5.png" alt="">
+            <h2>Ping<br>Lacson</h2>
             <h3>Party here</h3>
           </div>
-          <div class="Candidate2_1" onclick="Vision()">
-            <img src="Images/Cand De Guzman.png" alt="">
-            <h2>De Guzman, Leody</h2>
+          <div class="Candidate2_1" onclick="Vision(5)">
+            <img src="Images/Candidate6.png" alt="">
+            <h2>Isko<br>Moreno</h2>
             <h3>Party here</h3>
           </div>
         </div>

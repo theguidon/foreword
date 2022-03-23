@@ -524,6 +524,17 @@ nav{
 /* END OF NAV */
 .Section1{
   flex-direction: column-reverse;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Section1_1{
+  width: 100%;
+  margin: 0px 0px 100px;
+}
+
+.Section1_1 p{
+  width: 100%;
 }
 
 .Section2{

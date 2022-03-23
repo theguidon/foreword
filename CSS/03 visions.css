@@ -150,7 +150,6 @@ footer{
 main{
   /* margin-top: 50px; */
 }
-
 /* NAV end */
 
 .Section1{
@@ -257,7 +256,7 @@ main{
   left: 10%;
   box-sizing: border-box;
   background-color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   visibility: hidden;
   text-align: center;
@@ -268,7 +267,7 @@ main{
   z-index: 2;
 }
 
-.Section2_1pop img{
+.popimg{
   width: 250px;
   height: 250px;
   padding: 20px 0px 10px;
@@ -295,6 +294,9 @@ main{
   line-height: 16px;
 }
 
+.phase2{
+  visibility: hidden;
+}
 /* MOBILE NAV start ver 1.2 */
 .mob{
   display: none;
@@ -384,5 +386,143 @@ nav{
 }
 
 /* END OF NAV */
+
+.Section1{
+  padding: 150px 25px;
+  background-image: url("../Images/3 Section1mob.png");
+  background-position: bottom;
+}
+
+.Section1 h1{
+  font-size: 29px;
+  line-height: 44px;
+}
+
+.Section1 p{
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.Section2{
+  min-height: 0px;
+}
+
+.Section2Text{
+  padding: 45px 30px 40px;
+  height: auto;
+}
+
+.Section2Text h1{
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.Section2Text p{
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.Section2_1{
+  column-gap: 10px;
+}
+
+.Candidate2_1{
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.Candidate2_1 img{
+  width: 100%;
+  height: auto;
+}
+
+.Candidate2_1 h3{
+  display: none;
+}
+
+.Candidate2_1 h2{
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px 10px;
+}
+
+.Section2_1mobpop{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 80px;
+  z-index: 9;
+  overflow: scroll;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.Section2_1pop{
+  height: 900px;
+  margin: 20px 0px 50px;
+  width: 90%;
+  left: 5%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+main{
+  overflow: hidden;
+}
+
+.S2_1imgflex{
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+}
+
+.S2_1_1imgflex, .S2_1_3imgflex{
+  flex-direction: column;
+}
+
+.popimg{
+  /* height: 100%; */
+  height: 200px;
+  width: 200px;
+  /* width: 100%; */
+  /* margin: 0px; */
+  padding-bottom: 0px;
+}
+
+.Section2_1mobpop h2{
+  font-size: 24px;
+  line-height: 36px;
+  margin: 15px 0px 10px;
+}
+
+.Section2_1mobpop p{
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.Empty{
+  height: 100px;
+  width: 100%;
+  /* background-color: white; */
+}
+
+.img1, .img3{
+  height: 30px;
+  width: 30px;
+  margin-top: 20px;
+}
+
+.img2, .img4{
+  height: 75px;
+  width: 40px;
+  margin-top: 40px;
+  padding: 20px 5px;
+  box-sizing: border-box;
+}
+
 
 }

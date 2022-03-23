@@ -367,4 +367,32 @@ nav{
 
 /* END OF NAV */
 
+.Section2{
+  padding: 5px;
+  text-align: center;
+}
+
+.Section2_1 .Line{
+  display: none;
+}
+
+.Section2_2{
+  justify-content: space-around;
+}
+
+.Section2_2sub{
+  column-gap: 0px;
+  display: contents;
+}
+
+.Section2_2 img{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.Section2_2sub p{
+  display: none;
+}
+
 }
