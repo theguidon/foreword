@@ -28,6 +28,26 @@
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
       // END OF NAV
+      function Youthappear(youthnum) {
+        document.getElementsByClassName('Section2_2modal')[0].style.visibility = "visible";
+        document.getElementsByClassName('Section2_2modal')[0].style.opacity = "0.5";
+        document.getElementsByClassName('Section2_2pop')[0].style.opacity = "1";
+        document.getElementsByClassName('Section2_2pop')[0].style.visibility = "visible";
+        document.getElementsByClassName('Section2_2pop')[0].style.transform = "translateY(0px)";
+
+        document.getElementById('Youthimg').src = document.querySelectorAll(".Section2_2sub img")[youthnum].getAttribute('src');
+        document.getElementById('Youthtag').innerHTML = document.querySelectorAll(".Section2_2sub p")[youthnum].innerHTML;
+        document.getElementById('Youthtitle').innerHTML = document.querySelectorAll(".Section2_2sub h5")[youthnum].innerHTML;
+
+      }
+
+      function Youthcancel() {
+        document.getElementsByClassName('Section2_2modal')[0].style.visibility = "hidden";
+        document.getElementsByClassName('Section2_2modal')[0].style.opacity = "0";
+        document.getElementsByClassName('Section2_2pop')[0].style.opacity = "0";
+        document.getElementsByClassName('Section2_2pop')[0].style.visibility = "hidden";
+        document.getElementsByClassName('Section2_2pop')[0].style.transform = "translateY(20px)";
+      }
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
@@ -89,7 +109,8 @@ On the other hand, external youth groups are considered given their previous eng
       </div>
       <div class="Section2">
         <div class="mob">
-          <img src="Images/Foreword Logo Colored.png" alt="">
+          <img class="Forewordlogo" src="Images/Foreword Logo Colored.png" alt="">
+          <h4>Major Sponsors</h4>
           <div class="Section1_2sub">
             <h4>Accredited by</h4>
             <img src="Images/4 0 1.png" alt="">
@@ -111,32 +132,36 @@ On the other hand, external youth groups are considered given their previous eng
           <br><br>
           On the other hand, external youth groups are considered given their previous engagements, geographic location and audience reach, and specific or targeted advocacy. The GUIDON strives to be inclusive of different localities, while guaranteeing that there will be no repetition of location and advocacy
         </p>
+        <div class="Line mob"></div>
         <h1 class="nomob">Ateneo Universities Student Publications</h1>
         <h1 class="mob">In Association With<br>Ateneo Universities Student Publications</h1>
-        <div class="Line mob"></div>
         <div class="Section2_1">
-          <img src="Images/4 1 1.png" alt="">
+          <img class="nomob" src="Images/4 1 1.png" alt="">
+          <img class="mob" src="Images/4 1 1 mob.png" alt="">
           <p>
             The GUIDON, Ateneo de Manila University’s official publication, remains steadfast in its commitment of holding the Truth to power amid an era of misinformation. Founded in 1929 by Rev. Frank O’Hara, SJ and first led by Manuel C. Colayco in 1930 as Editor-in-Chief, it has since been a training ground for countless writers, designers and managers in the practice of responsible journalism.
             <br><br>
             In the organization’s 92nd year, The GUIDON strives to bolster community journalism through service-oriented storytelling that amplifies the narratives of underrepresented individuals and empowers the agency of our committed writers, artists, and managers. The publication hopes to venture into journalism that is fearless, balanced, and human-centric by constantly championing the Truth.
           </p>
           <div class="Line"></div>
-          <img src="Images/4 1 2.png" alt="">
+          <img class="nomob" src="Images/4 1 2.png" alt="">
+          <img class="mob" src="Images/4 1 2 mob.png" alt="">
           <p>
             The GUIDON, Ateneo de Manila University’s official publication, remains steadfast in its commitment of holding the Truth to power amid an era of misinformation. Founded in 1929 by Rev. Frank O’Hara, SJ and first led by Manuel C. Colayco in 1930 as Editor-in-Chief, it has since been a training ground for countless writers, designers and managers in the practice of responsible journalism.
             <br><br>
             In the organization’s 92nd year, The GUIDON strives to bolster community journalism through service-oriented storytelling that amplifies the narratives of underrepresented individuals and empowers the agency of our committed writers, artists, and managers. The publication hopes to venture into journalism that is fearless, balanced, and human-centric by constantly championing the Truth.
           </p>
           <div class="Line"></div>
-          <img src="Images/4 1 3.png" alt="">
+          <img class="nomob" src="Images/4 1 3.png" alt="">
+          <img class="mob" src="Images/4 1 3 mob.png" alt="">
           <p>
             The GUIDON, Ateneo de Manila University’s official publication, remains steadfast in its commitment of holding the Truth to power amid an era of misinformation. Founded in 1929 by Rev. Frank O’Hara, SJ and first led by Manuel C. Colayco in 1930 as Editor-in-Chief, it has since been a training ground for countless writers, designers and managers in the practice of responsible journalism.
             <br><br>
             In the organization’s 92nd year, The GUIDON strives to bolster community journalism through service-oriented storytelling that amplifies the narratives of underrepresented individuals and empowers the agency of our committed writers, artists, and managers. The publication hopes to venture into journalism that is fearless, balanced, and human-centric by constantly championing the Truth.
           </p>
           <div class="Line"></div>
-          <img src="Images/4 1 4.png" alt="">
+          <img class="nomob" src="Images/4 1 4.png" alt="">
+          <img class="mob" src="Images/4 1 4 mob.png" alt="">
           <p>
             The GUIDON, Ateneo de Manila University’s official publication, remains steadfast in its commitment of holding the Truth to power amid an era of misinformation. Founded in 1929 by Rev. Frank O’Hara, SJ and first led by Manuel C. Colayco in 1930 as Editor-in-Chief, it has since been a training ground for countless writers, designers and managers in the practice of responsible journalism.
             <br><br>
@@ -151,56 +176,88 @@ On the other hand, external youth groups are considered given their previous eng
         <p class="mob">
           Tap on any of the icons below to learn more about our participating external youth groups
         </p>
-        <div class="Section2_2">
+        <div class="Section2_2 nomob">
           <div class="Section2_2sub">
+            <h5 class="mob">Sulong!</h5>
             <img src="Images/4 2 1.png" alt="">
             <p>Sulong! Philippines is a non-profit and non-governmental youth organization that refers victim-survivors of sexual violence and harassment to free legal advice, psychological aid, and other services, and advocates for the eradication of gender-based violence and the emancipation of women and LGBTQ+ people in the Philippines and the world.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">UP Samahan Tungo</h5>
             <img src="Images/4 2 2.png" alt="">
             <p>UP Samahan Tungo sa Progresibong Administrasyon (UP STPA) is a university-recognized socio-academic organization based in the UP National College of Public Administration and Governance that upholds the principles and practices of Public Administration. Since its foundation in 1988, UP STPA has forwarded critical awareness, academic excellence, and public service by conducting activities related to important political and social issues inside and outside the university.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">Institute for Nationalist Studies</h5>
             <img src="Images/4 2 3.png" alt="">
             <p>Institute for Nationalist Studies is a non-stock, non-profit,  independent youth institution committed to the advancement of ideas,  researches, discussions, and information campaigns on social issues to  ferment and advance a nationalist consciousness for the interest and  defense of the people's rights and welfare, through promoting  alternative education with a nationalist, mass-oriented and scientific curriculum.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">The Xavier University<br>Central Student Government Office</h5>
             <img src="Images/4 2 4.png" alt="">
             <p>The Xavier University - Central Student Government Office of the Vice President  (XU - CSG OVP) is established to provide any form of services to the day-to-day duties and responsibilities of the XU - CSG Vice President. The XU - CSG OVP this year is at the forefront of creating a more cause-oriented and socially engaged Xavier Ateneo through its FOURward Agenda which aims to engage in agricultural efforts, open spaces for sexual health discussions, voter's education and engagement, and the institutionalization of the STRAW Movement.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">KalikaSan Pablo</h5>
             <img src="Images/4 2 5.png" alt="">
             <p>KalikaSan Pablo is a youth organization that advocates for environmental consciousness and sustainability in the City of San Pablo, Laguna. We champion youth-led environmental consciousness, communities, initiatives, and governance for the planet and the people.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">The External Affairs Council (EAC)</h5>
             <img src="Images/4 2 6.png" alt="">
             <p>The External Affairs Council (EAC) is the official arm of the ASMPH Student Council that proactively integrates the student body to the greater community.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">Kurit Bulawan</h5>
             <img src="Images/4 2 7.png" alt="">
             <p>Kurit Bulawan is the official student publication of Ateneo de Naga University Senior High School, serving as a bridge to inform students and communities both inside and outside the university by triggering public opinion that shapes social transformation. Established in 2018, a home for writers who act in accordance with their calling, “Standing on the pillars of truth,” marks our advocacy of preservation of rights, accountability of those who dismantled parts of the society, and balanced news reporting through print and broadcast.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">JJC Naga</h5>
             <img src="Images/4 2 8.png" alt="">
             <p>JJC Naga is a community-based organization that proffers youth empowerment, responds to socio-civic affairs for positive change and takes actions in order to contribute to the overall welfare of the society.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob">WE THE YOUTH VOTE!</h5>
             <img src="Images/4 2 9.png" alt="">
             <p>WE THE YOUTH VOTE is a non-partisan community of concerned young Filipinos from different fields. We recognize the untapped power of the Filipino youth for change. We envision a Filipino youth empowered to collectively take action in shaping the country’s future through one of the essential ways to do so – by exercising their right to vote. We are a community for action and change for the youth, by the youth, with the youth.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob"></h5>
             <img src="Images/4 2 10.png" alt="">
             <p>A young advocacy project that promotes autism awareness, associated with mental health, in communities, in elementary, secondary, and tertiary schools, in therapeutic intervention clinics, and in workplaces across the country.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob"></h5>
             <img src="Images/4 2 11.png" alt="">
             <p>Sinag Quezon Inc. is a duly registered non-profit and non-partisan organization that connects and empowers an efficient and inclusive youth sector in Quezon Province. It aims to deliver constant service for the province to the best of its members’ abilities through advocating for the Sustainable Development Goals (SDGs) provided by the United Nations (UN) — the blueprints that will serve as a guide to achieve a proper and self-sustained future for everyone.</p>
           </div>
           <div class="Section2_2sub">
+            <h5 class="mob"></h5>
             <img src="Images/4 2 12.png" alt="">
             <p>Zenith PH is a youth-led, non-profit organization that seeks to mitigate the issues of our marginalized communities by educating the youth and providing them with opportunities to take initiative.</p>
           </div>
-          </div>
+        </div>
+        <div class="Section2_2 mob">
+          <img src="Images/4 2 1.png" alt="" onclick="Youthappear(0)">
+          <img src="Images/4 2 2.png" alt="" onclick="Youthappear(1)">
+          <img src="Images/4 2 3.png" alt="" onclick="Youthappear(2)">
+          <img src="Images/4 2 4.png" alt="" onclick="Youthappear(3)">
+          <img src="Images/4 2 5.png" alt="" onclick="Youthappear(4)">
+          <img src="Images/4 2 6.png" alt="" onclick="Youthappear(5)">
+          <img src="Images/4 2 7.png" alt="" onclick="Youthappear(6)">
+          <img src="Images/4 2 8.png" alt="" onclick="Youthappear(7)">
+          <img src="Images/4 2 9.png" alt="" onclick="Youthappear(8)">
+          <img src="Images/4 2 10.png" alt="" onclick="Youthappear(9)">
+          <img src="Images/4 2 11.png" alt="" onclick="Youthappear(10)">
+          <img src="Images/4 2 12.png" alt="" onclick="Youthappear(11)">
+        </div>
+        <div class="Section2_2modal" onclick="Youthcancel()"></div>
+        <div class="Section2_2pop">
+          <img id="Youthimg" src="Images/4 2 1.png" alt="">
+          <h5 id="Youthtitle">Kurit Bulawan</h5>
+          <p id="Youthtag">Kurit Bulawan is the official student publication of Ateneo de Naga University Senior High School, serving as a bridge to inform students and communities both inside and outside the university by triggering public opinion that shapes social transformation. Established in 2018, a home for writers who act in accordance with their calling, “Standing on the pillars of truth,” marks our advocacy of preservation of rights, accountability of those who dismantled parts of the society, and balanced news reporting through print and broadcast.</p>
+        </div>
       </div>
       <footer class="footer"> <!-- Version 1.3 -->
         <div class="leftfooter">

@@ -368,12 +368,58 @@ nav{
 /* END OF NAV */
 
 .Section2{
-  padding: 5px;
+  padding: 20px 5px;
   text-align: center;
+}
+
+.Section2 h4, .Section2 h1{
+  color: #2857CE;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0px 0px 20px;
+}
+
+.Section2 h3{
+  font-size: 14px;
+  line-height: 21px;
+  color: #000E42;
+  padding: 0px 0px 10px;
+}
+
+.Section2 p{
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.Line{
+  margin: 30px 0px 40px;
+}
+
+.Forewordlogo{
+  width: 90%;
+}
+
+.Section1_2sub{
+  width: 100%;
+  padding: 10px;
+}
+
+.Section1_2sub img{
+  width: 30%;
+  padding: 5px;
 }
 
 .Section2_1 .Line{
   display: none;
+}
+
+.Section2_1 img{
+  width: 70%;
+}
+
+.Section2 p{
+  width: 90%;
+  padding: 0px 10px 20px;
 }
 
 .Section2_2{
@@ -394,5 +440,43 @@ nav{
 .Section2_2sub p{
   display: none;
 }
+
+.Section2_2modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: gray;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.Section2_2pop{
+  position: fixed;
+  top: 35%;
+  left: 5%;
+  width: 90%;
+  height: 340px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.2s linear, visibility 0.2s linear, transform 0.2s linear;
+}
+
+#Youthimg{
+  height: 100px;
+  padding-bottom: 5px;
+}
+
+#Youthtitle{
+  padding-bottom: 10px;
+}
+
+
 
 }
