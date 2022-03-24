@@ -294,6 +294,10 @@ main{
   line-height: 16px;
 }
 
+.S2_1imgflex{
+  background-size: 0px;
+}
+
 .phase2{
   visibility: hidden;
 }
@@ -477,7 +481,8 @@ main{
 .S2_1imgflex{
   display: flex;
   justify-content: space-around;
-  background-color: red;
+  background-size: cover;
+  background-image: url("../Images/Cand1bg.png");
 }
 
 .S2_1_1imgflex, .S2_1_3imgflex{

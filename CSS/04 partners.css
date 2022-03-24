@@ -367,6 +367,10 @@ nav{
 
 /* END OF NAV */
 
+.Section1{
+  background-image: url("../Images/4 Section1mob.png");
+}
+
 .Section2{
   padding: 20px 5px;
   text-align: center;
