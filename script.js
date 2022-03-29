@@ -48,8 +48,8 @@ window.onscroll = function (e) {
 
 
 // COUNTER ----------------------
-// var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
-var countDownDate = new Date("Mar 21, 2022 11:59:00").getTime();
+var countDownDate = new Date("April 8, 2022 16:00:00").getTime();
+// var countDownDate = new Date("Mar 21, 2022 11:59:00").getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
