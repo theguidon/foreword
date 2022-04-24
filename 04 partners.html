@@ -8,7 +8,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
-      // Mobile Nav Version 1.1
+    // Mobile Nav Version 2.0
       function navopen() {
         document.getElementsByClassName('Modal')[0].style.visibility = "visible";
         document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
@@ -20,6 +20,28 @@
         document.getElementsByClassName('Modal')[0].style.opacity = "0";
         document.getElementsByClassName('MenuItems')[0].style.visibility = "hidden";
         document.getElementsByClassName('MenuItems')[0].style.transform = "translate(60%)";
+      }
+      function navhover() {
+        var Extranav = document.getElementsByClassName("ExtraNav")[0];
+        var Extranavmodal = document.getElementsByClassName("ExtraNavModal")[0];
+        if (Extranav.style.display === "none") {
+          Extranav.style.display = "block";
+          Extranavmodal.style.display = "block";
+        } else {
+          Extranav.style.display = "none";
+          Extranavmodal.style.display = "none";
+        }
+      }
+      function ExtraNavmob() {
+        var ExtraNavmob = document.getElementsByClassName("ExtraNavmob")[0];
+        var Chevron = document.getElementsByClassName("Chevron")[0];
+        if (ExtraNavmob.style.height == "0px") {
+          ExtraNavmob.style.height = "210px";
+          Chevron.style.transform = "rotate(-180deg)"
+        } else {
+          ExtraNavmob.style.height = "0px";
+          Chevron.style.transform = "rotate(0deg)"
+        }
       }
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
@@ -53,7 +75,7 @@
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 1.3 -->
+    <nav> <!-- Version 2.0 -->
       <span class="Nav-left">
         <a href="">
           <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
@@ -62,27 +84,41 @@
       </span>
       <span class="Nav-right nomob">
        <a href="index.html">Home</a>
-       <a href="01 about foreword.html">About Foreword</a>
-       <a href="02 livestream.html">Livestream</a>
        <a href="03 visions.html">Candidates' Visions</a>
-       <a href="04 partners.html" class="Navoff">Our Partners</a>
-       <a href="05 about guidon.html">About The GUIDON</a>
-       <a href="06 contactus.html">Contact Us</a>
+       <a href="04 partners.html">Our Partners</a>
+       <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+       <img class="navburger nomob" src="Images/Navburgerpc.png" alt="" onclick="navhover()">
       </span>
+      <div class="ExtraNav">
+        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+      </div>
+      <div class="ExtraNavModal" onclick="navhover()"></div>
+
+
       <img class="Navimage mob" src="Images/Navburger.png" alt="" onclick="navopen()">
     </nav>
-    <div class="Modal mob" onclick="navclose()">
-
-    </div>
+    <div class="Modal mob" onclick="navclose()"></div>
     <div class="MenuItems mob">
       <a href="index.html">Home</a>
-      <a href="01 about foreword.html">About Foreword</a>
-      <a href="02 livestream.html">Livestream</a>
-      <a href="03 visions.html">Candidates' Visions</a>
-      <a href="04 partners.html" class="Navoff">Our Partners</a>
-      <a href="05 about guidon.html">About The GUIDON</a>
-      <a href="06 contactus.html">Contact Us</a>
+      <a onclick="ExtraNavmob()">Candidates' Visions &nbsp<img src="Images/Chevron.png" class="Chevron" alt=""></a>
+      <div class="ExtraNavmob mob">
+        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+      </div>
+      <a href="04 partners.html">Our Partners</a>
+      <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
     </div>
+
+
     <!-- End of Nav -->
     <main style="margin-top:50px;">
       <div class="Section1">
