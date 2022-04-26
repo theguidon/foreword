@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Foreword Home</title>
+    <link rel="stylesheet" href="CSS/CandidateVision.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script type="text/javascript">
+    // Mobile Nav Version 2.1
+      function navopen() {
+        document.getElementsByClassName('Modal')[0].style.visibility = "visible";
+        document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
+        document.getElementsByClassName('MenuItems')[0].style.visibility = "visible";
+        document.getElementsByClassName('MenuItems')[0].style.transform = "translate(0px)";
+      }
+      function navclose() {
+        document.getElementsByClassName('Modal')[0].style.visibility = "hidden";
+        document.getElementsByClassName('Modal')[0].style.opacity = "0";
+        document.getElementsByClassName('MenuItems')[0].style.visibility = "hidden";
+        document.getElementsByClassName('MenuItems')[0].style.transform = "translate(60%)";
+      }
+      function navhover() {
+        var Extranav = document.getElementsByClassName("ExtraNav")[0];
+        var Extranavmodal = document.getElementsByClassName("ExtraNavModal")[0];
+        if (Extranav.style.display === "none") {
+          Extranav.style.display = "block";
+          Extranavmodal.style.display = "block";
+        } else {
+          Extranav.style.display = "none";
+          Extranavmodal.style.display = "none";
+        }
+      }
+      function ExtraNavmob() {
+        var ExtraNavmob = document.getElementsByClassName("ExtraNavmob")[0];
+        var Chevron = document.getElementsByClassName("Chevron")[0];
+        if (ExtraNavmob.style.height == "0px") {
+          ExtraNavmob.style.height = "210px";
+          Chevron.style.transform = "rotate(-180deg)";
+        } else {
+          ExtraNavmob.style.height = "0px";
+          Chevron.style.transform = "rotate(0deg)";
+        }
+      }
+      function CandidateVision(){
+        console.log("unfinished");
+      }
+      window.onresize = function (e) {
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+      }
+      window.onload = function (e) {
+        document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
+      }
+    // END OF NAV
+
+      function InfographicToggle(){
+        var InfoModal = document.getElementsByClassName("InfographicModal")[0];
+        var InfoPopout = document.getElementsByClassName("InfographicPopout")[0];
+        if (InfoModal.style.visibility == "hidden") {
+          InfoModal.style.visibility = "visible";
+          InfoPopout.style.visibility = "visible";
+        } else {
+          InfoModal.style.visibility = "hidden";
+          InfoPopout.style.visibility = "hidden";
+        }
+      }
+
+      function Candidate(Candnumber){
+        var CandidateLinks = [];
+        document.getElementsByClassName("Changevid")[0];
+        document.getElementsByClassName("ChangeBG")[0];
+        document.getElementsByClassName("ChangeImg")[0];
+        document.getElementsByClassName("ChangeName")[0];
+        document.getElementsByClassName("ChangeDes")[0];
+        // console.log(document.getElementsByClassName("ChangeOnclick")[0].onclick);
+        document.getElementsByClassName("ChangeOnclick")[0].setAttribute( "onClick", "Candidate(" + String((Candnumber - 1 + 6) % 6) + ")" );
+        document.getElementsByClassName("ChangeOnclick")[1].setAttribute( "onClick", "Candidate(" + String((Candnumber + 1) % 6) + ")" );
+      }
+    </script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <link rel="icon" href="Images/Foreword Logo C.png">
+  </head>
+  <body>
+    <nav> <!-- Version 2.0 -->
+      <span class="Nav-left">
+        <a href="">
+          <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
+          <img class="Home2 mob" src="Images/Foreword Logo C.png" alt="">
+        </a>
+      </span>
+      <span class="Nav-right nomob">
+       <a href="index.html">Home</a>
+       <a href="03 visions.html">Candidates' Visions</a>
+       <a href="04 partners.html">Our Partners</a>
+       <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+       <img class="navburger nomob" src="Images/Navburgerpc.png" alt="" onclick="navhover()">
+      </span>
+      <div class="ExtraNav" style="display: none;">
+        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+      </div>
+      <div class="ExtraNavModal" onclick="navhover()"></div>
+
+
+      <img class="Navimage mob" src="Images/Navburger.png" alt="" onclick="navopen()">
+    </nav>
+    <div class="Modal mob" onclick="navclose()"></div>
+    <div class="MenuItems mob">
+      <a href="index.html">Home</a>
+      <a onclick="ExtraNavmob()">Candidates' Visions &nbsp<img src="Images/Chevron.png" class="Chevron" alt=""></a>
+      <div class="ExtraNavmob mob">
+        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+      </div>
+      <a href="04 partners.html">Our Partners</a>
+      <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+    </div>
+
+
+    <!-- End of Nav -->
+
+    <main id="main">
+      <div class="Space"></div>
+      <div class="Section1_1"></div>
+      <!-- Empty div to fix js ^ -->
+      <div class="Section1">
+        <iframe style="ChangeVid" width="560" height="315" src="https://www.youtube.com/embed/tgB1wUcmbbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="ChangeBG Section2" style="background-image: url('Images/2 Section1.png');">
+        <div class="Section2_1">
+          <div class="Section2_1_1">
+
+            <h1 class="Section2Header">The Presidential Candidates’ Assembly</h1>
+            <div class="Line2"></div>
+            <p class="Section2Text">Click on the thumbnails below to view the candidate’s Foreword 2022 interview.</p>
+
+            <div class="Section2flex">
+              <div class="Section2flexitem" onclick="Candidate(0)">
+                <div class="Hoverlay">
+                  <img src="Images/Icon right.png" alt="">
+                </div>
+                <img src="Images/0 2 1.png" alt="">
+                <div class="Section2flexitem2">
+                  <img src="Images/Cand1.png" alt="">
+                  <div class="Section2flexitem3">
+                    <h2>Ernesto Abella<br>Full Interview</h2>
+                    <div class="Line2"></div>
+                    <p>Ernesto “Ernie” Abella discusses his experience as presidential spokesperson and plans ahead.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="Section2flexitem" onclick="Candidate(1)">
+                <div class="Hoverlay">
+                  <img src="Images/Icon right.png" alt="">
+                </div>
+                <img src="Images/0 2 2.png" alt="">
+                <div class="Section2flexitem2">
+                  <img src="Images/Cand2.png" alt="">
+                  <div class="Section2flexitem3">
+                    <h2>Leody De Guzman<br>Full Interview</h2>
+                    <div class="Line2"></div>
+                    <p>Leody De Guzman discusses his platform & vision for The Philippines as president.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="Section2flexitem" onclick="Candidate(2)">
+                <div class="Hoverlay">
+                  <img src="Images/Icon right.png" alt="">
+                </div>
+                <img src="Images/0 2 3.png" alt="">
+                <div class="Section2flexitem2">
+                  <img src="Images/Cand3.png" alt="">
+                  <div class="Section2flexitem3">
+                    <h2>Noberto Gonzales<br>Full Interview</h2>
+                    <div class="Line2"></div>
+                    <p>Norberto Gonzales discusses his time as secretary of national defense and plans.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="Section2flexitem" onclick="Candidate(3)">
+                <div class="Hoverlay">
+                  <img src="Images/Icon right.png" alt="">
+                </div>
+                <img src="Images/0 2 5.png" alt="">
+                <div class="Section2flexitem2">
+                  <img src="Images/Cand4.png" alt="">
+                  <div class="Section2flexitem3">
+                    <h2>Ping Lacson<br>Full Interview</h2>
+                    <div class="Line2"></div>
+                    <p>Ping Lacson’s spokesperson Ace Acedillo represents Sen. Lacson in this interview.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="Section2flexitem" onclick="Candidate(4)">
+                <div class="Hoverlay">
+                  <img src="Images/Icon right.png" alt="">
+                </div>
+                <img src="Images/0 2 6.png" alt="">
+                <div class="Section2flexitem2">
+                  <img src="Images/Cand5.png" alt="">
+                  <div class="Section2flexitem3">
+                    <h2>Jose Montemayor Jr.<br>Full Interview</h2>
+                    <div class="Line2"></div>
+                    <p>Dr. Jose Montemayor discusses his experience as cardiologist and his plans as President.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="Section2flexitem" onclick="Candidate(5)">
+                <div class="Hoverlay">
+                  <img src="Images/Icon right.png" alt="">
+                </div>
+                <img src="Images/0 2 7.png" alt="">
+                <div class="Section2flexitem2">
+                  <img src="Images/Cand6.png" alt="">
+                  <div class="Section2flexitem3">
+                    <h2>Manny Pacquiao<br>Full Interview</h2>
+                    <div class="Line2"></div>
+                    <p>Senator Manny Pacquiao discusses his experience in senate and his plans as President.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Section2_1_2">
+            <h1 class="Section2Header">The Presidential Candidates’ Assembly</h1>
+            <div class="Line2"></div>
+            <p class="Section2Text">Click on the thumbnails below to view the candidate’s Foreword 2022 interview.</p>
+            <div class="Section2_1_2flex">
+              <img class="infographic" src="Images/Infographic.png" alt=""  onclick="InfographicToggle()">
+              <p>The infographic to the right details the heights, escapades, and tribulous triumphs of one Rexum Palanca, multi-billion dollar owner of Solux Industries and Tier I Avenger™(© 2022 Marvel, Inc.)! learn more about Rexum Palanca in the infographic to the right as it details the penultimate pinnacle of Palanca’s palpatatingly pernicious propaganda-packed patrol of peril - latest edition! Dial 09456344956 for more info on how you, YES you, can avail of a copy of Rexum Palanca’s newly published New York Time’s best-selling and critically acclaimed novel, To The Sun and Back. If you call right now, you will also be able to get an autographed Rexum Palanca poster and a one-of-a-kind NFT of Palanca’s self portrait Virtual Escape valued by Christie’s at 129,424.71 ETH, 9631.32 Bitcoin, $380,000,000, ₱19,857,662,366.44, or 420 SUN. Call now and allocate your funds to the newest cryptoventure today, don’t miss out on SUN token’s bi-semanal price hike of 530% this election day.<br>
+<br>
+All Rights Reserved © Walt Disney Studios, MMXXII<br>
+<br>
+Special thanks to:<br>
+Stark Industries<br>
+Oscorp<br>
+Pym Technologies<br>
+Parker Industries<br>
+The Daily Bugle</p>
+            </div>
+          </div>
+        </div>
+        <div class="Section2_2">
+          <div class="Section2_2fleximg">
+            <img class="ChangeOnclick Section2_2arrows" src="Images/Icon2 left.png" alt="" onclick="Candidate(0)">
+            <img class="ChangeImg" src="Images/Cand1v.png" alt="">
+            <img class="ChangeOnclick Section2_2arrows" src="Images/Icon2 right.png" alt="" onclick="Candidate(1)">
+          </div>
+          <h2>Candidate Profile</h2>
+          <h1 class="ChangeName">Ernesto Abella</h1>
+          <p class="ChangeDes">Looking to avenge his dead father after the Battle of New York in 2012, Rexum vows to never again bear witness to atrocities against the good of mankind. As President of The GUIDON Rexum intends to rule with an iron fist. While other leaders lead with fear, Rexum intends to lead with respect. With regards to the current state of order and governance in the organization, Rexum had this to say, “I have never witnessed such injustice as I’ve seen in the corridors and backrooms of Ateneo’s Online Learning Campus since Loki vaporized my father right in front of my eyes on that fateful day in New York in 2012.” This election cycle has been particularly tough as it not only marks the 10th death anniversary of his father, but also the 4th death anniversary of his mother who passed away at the hands of Ebony Maw’s assault on Bleecker St. in 2018. It was on that fateful day in Midgard where Rexum vowed to Avenge™ said parents and bring justice throughout the Multiverse™. As our country continues to reel from the effects of “The Blip” 4 years ago, Rexum vows to lead us into a new promised land and prove Thanos wrong by creating the proper systems to maximize our resources in a renewable manner and mitigate the long-term detriments of overpopulation and overconsumption. “Overconsumption is the major problem facing humanity in the 21st century”, said Rexum at the UN Climate Change Conference 2022. In talks with Abbott & Costello, Rexum Palanca learned the biomechanics of photosynthesis and has since been able to develop a non-retail prototype tailored for personal use. Rexum began developing this photosynthesis biochip in 2017 during the Bitcoin Pump of December. Since then Rexum has refined the design and currently has embedded in his scalp a CentennialSolus v2.4 fully-functional model. This chip embedded into Rexum Palanca’s lower brain stem communicates with receivers in his lower digestive tract and epidermis nerves of the somatic nervous system to receive the heat from direct sunlight and directly convert it into calories for his digestive system to process. This innovative new device is currently dubbed “CentennialSolus” for its optimistic goals of extending life by 100 years by virtue of photosynthesis. Rexum Palanca claims that his expertise in the field of solar power can help elevate the Philippines to a global superpower within his term if elected President. “A new horizon awaits humanity,” Rexum Palanca said at Solux’s annual shareholders meeting last March 18th, “By the turn of the 22nd century, Homo Sapiens as a species will be known throughout the Galaxy as a superior Type 3 civilization of immortal beings not to be reckoned with!” The preceding statement was then followed by rapturous applause as the newly launched cryptocurrency/NFT-backed Stock “SOLUS” (Nasdaq ticker SUN, cryptocurrency token acronym/name SUN / Solumbara) went up 478% in intra-day trading at Wall Street with the coin tunning up 5300% in 2 hours after the shareholders meeting, much to the chagrin to the Rexum’s Solux Play-To-Earn competitors in the crypto space.
+“If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
+        </div>
+      </div>
+      <div class="InfographicModal" onclick="InfographicToggle()" style="visibility: hidden;"></div>
+      <img class="InfographicPopout" src="Images/Infographic.png" style="visibility: hidden;" alt="">
+      <footer class="footer"> <!-- Version 2.0 -->
+        <div class="leftfooter">
+          <div class="footerimages">
+            <img src="Images/Foreword Logo Text.png" alt="">
+            <img src="Images/Guidon Logo.png" alt="">
+          </div>
+          <p>Foreword 2022 is a student-led event, with organizers belonging to The GUIDON's Beyond Loyola and Externals Staffs. The GUIDON is conducting this assembly in partnership with the Commission on Elections (COMELEC) and media partner ABS-CBN News Channel (ANC). All outputs pertaining to this event were curated following The GUIDON's editorial independence policies.</p>
+          <div class="footericons">
+            <a href="https://www.youtube.com/user/TheGuidon"><img src="Images/Icon YT.png" alt=""></a>
+            <a href="https://www.facebook.com/TheGUIDON"><img src="Images/Icon FB.png" alt=""></a>
+            <a href="https://www.instagram.com/theguidon/"><img src="Images/Icon IG.png" alt=""></a>
+            <a href="https://theguidon.com/1112/main/"><img src="Images/Icon Twitter.png" alt=""></a>
+            <a href="https://twitter.com/TheGUIDON"><img src="Images/Icon Web.png" alt=""></a>
+          </div>
+        </div>
+        <div class="rightfooter nomob">
+          <a href="index.html" class="Navoff">Home</a>
+          <a href="03 visions.html">Candidates' Visions</a>
+          <a href="04 partners.html">Our Partners</a>
+          <a href="05 about guidon.html">About The GUIDON</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- <script type="text/javascript">
+      ScrollOut({
+        targets: '.leftfooter, .rightfooter, .FlexitemCandidates'
+      })
+    </script> -->
+
+  </body>
+</html>
