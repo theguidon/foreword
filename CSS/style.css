@@ -679,7 +679,7 @@ nav{
 
 .Line{
   border: 0.5px solid rgba(40, 87, 206, 0.34);
-  width: 100%;
+  width: calc(100% - 2px);
   margin: 5px 0px;
 }
 
@@ -702,149 +702,80 @@ nav{
 
 .Section2{
   height: auto;
-  background-image: none;
-  color: #000E42;
+  background-image: url("../Images/0 Section2mob.png");
+  background-size: cover;
+  background-position: center;
   flex-wrap: wrap;
-  margin: 20px 0px;
   box-sizing: border-box;
+  padding: 40px;
 }
 
-.Section2_1, .Section2_2{
+.Section2Header{
+  margin-top: 10px;
+}
+
+.Section2flexmob{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
   width: 100%;
-  text-align: center;
-  margin: 0px;
-  box-sizing: border-box;
+  margin-bottom: 40px;
 }
 
-.Section2_1 p{
+.Section2flexmobitem{
+  width: 98px;
+  height: 143px;
+  background-size: cover;
+}
+
+.Section2Header2{
+  margin-top: 30px;
+}
+
+.ChangeVid{
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 30px;
+}
+
+.Section3{
+  padding: 20px 0px 0px;
+}
+
+.SubSection3mob{
+  padding: 20px 20px 10px;
+}
+
+.SubSection3pmob{
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-}
-
-.CountdownClass{
-  margin-top: 0px !important;
-}
-
-#Countdown{
+  text-align: left;
   color: #2857CE;
-  width: 1px !important;
-  justify-content: center;
-  margin: 10px auto 0px;
-}
-
-.Section2_2 iframe{
-  height: 0px;
-  margin: 20px 0px;
-  transition: height 0.5s;
-}
-
-.Button.mob{
-  background-color: white;
-  color: #2857CE;
-  border: 2px solid #2857CE;
-  /* width: 43%; */
-  box-sizing: border-box;
-  display: inline-block;
-  margin: 0px 2px;
-  padding: 10px 8px;
-}
-
-.Button img{
-  margin-right: 1px;
-  filter: invert(26%) sepia(65%) saturate(2793%) hue-rotate(216deg) brightness(85%) contrast(89%);
-}
-
-.Section3_1{
+  width: 100%;
+  margin: 0px 0px 15px 0px;
   padding: 0px;
-}
-
-.FlexCandidates{
-  padding: 10px 20px;
-}
-
-.FlexitemCandidates{
-  width: 28%;
-  padding: 0px;
-  overflow: hidden;
   height: auto;
-  margin: 20px 7px;
-  background: none;
-  box-shadow: 0px 0.940141px 5.64085px 1.88028px rgba(0, 0, 0, 0.25);
-  border-radius: 9.40141px;
 }
 
-.FlexitemCandidates p{
-  display: none;
-}
-
-.FlexitemCandidates h3{
-  display: none;
-}
-
-.FlexitemCandidates img{
-  width: 100px;
-  height: 90px;
-  border-radius: 0px;
-  box-sizing: border-box;
-  box-shadow: none;
-}
-
-.LearnMore{
-  margin: 0px auto 40px;
-  font-size: 12px;
-  line-height: 14px;
-  width: 250px;
-  display: block;
-}
-
-.Section3_2{
-  flex-wrap: wrap;
-  padding: 0px;
-}
-
-.Section3_2 h1{
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-  color: #000E42;
-  margin: 10px auto 0px;
-  width: 100%;
-  justify-content: center;
-}
-
-.Section3_2 p{
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  color: #2857CE;
-  margin: auto;
-}
-
-.left3_2{
-  width: 100%;
-  margin: 30px 0px 20px;
-}
-
-.right3_2{
-  width: 100%;
-  margin: 0px;
-}
-
-.twitframe{
-  margin: 20px 60px 30px;
-  height: 800px !important;
-}
-
-.twitmore{
-  width: 130px;
-  padding: 10px 5px;
+.SubSection3pmob2{
+  margin-bottom: 35px;
 }
 
 
 .Section4{
   flex-direction: column-reverse;
   background-image: none;
-  padding: 0px 10px 20px;
+  padding: 20px;
+}
+
+.Section4 h1{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000E42;
 }
 
 .Section4 img.mob{
@@ -859,13 +790,13 @@ nav{
 .Section4_1{
   width: 100%;
   min-width: 0px;
-  padding: 10px 10px;
+  padding: 15px 0px;
 }
 
 .Section4_1 p{
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
+  text-align: left;
   color: #000E42;
 }
 
@@ -877,7 +808,15 @@ nav{
   width: 100%;
 }
 
+.Section5{
+  padding: 20px;
+}
 
+.twitframe{
+  overflow:hidden;
+  height: 2000px;
+  margin: 20px 0px;
+}
 
 
 
