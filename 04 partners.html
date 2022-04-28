@@ -8,7 +8,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
-    // Mobile Nav Version 2.0
+    // Mobile Nav Version 2.2
       function navopen() {
         document.getElementsByClassName('Modal')[0].style.visibility = "visible";
         document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
@@ -43,13 +43,17 @@
           Chevron.style.transform = "rotate(0deg)"
         }
       }
+      function CandidateVision(ClickedCandidate){
+        localStorage.setItem("ClickedVision", ClickedCandidate);
+        window.location = "02 Candidates Vision.html";
+      }
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
       window.onload = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
-      // END OF NAV
+    // END OF NAV
       function Youthappear(youthnum) {
         document.getElementsByClassName('Section2_2modal')[0].style.visibility = "visible";
         document.getElementsByClassName('Section2_2modal')[0].style.opacity = "0.5";
@@ -75,7 +79,7 @@
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 2.0 -->
+    <nav> <!-- Version 2.2 -->
       <span class="Nav-left">
         <a href="">
           <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
@@ -85,17 +89,17 @@
       <span class="Nav-right nomob">
        <a href="index.html">Home</a>
        <a href="03 visions.html">Candidates' Visions</a>
-       <a href="04 partners.html">Our Partners</a>
-       <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+       <a href="04 partners.html" class="Navoff">Our Partners</a>
+       <a href="05 about guidon.html">About The GUIDON</a>
        <img class="navburger nomob" src="Images/Navburgerpc.png" alt="" onclick="navhover()">
       </span>
-      <div class="ExtraNav">
-        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+      <div class="ExtraNav" style="display: none;">
+        <div class="ExtraNavCont" onclick="CandidateVision(0)">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(1)">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(2)">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(3)">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(4)">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(5)">PACQUIAO, Manny</div>
       </div>
       <div class="ExtraNavModal" onclick="navhover()"></div>
 
@@ -107,15 +111,15 @@
       <a href="index.html">Home</a>
       <a onclick="ExtraNavmob()">Candidates' Visions &nbsp<img src="Images/Chevron.png" class="Chevron" alt=""></a>
       <div class="ExtraNavmob mob">
-        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(0)">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(1)">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(2)">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(3)">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(4)">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(5)">PACQUIAO, Manny</div>
       </div>
-      <a href="04 partners.html">Our Partners</a>
-      <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+      <a href="04 partners.html" class="Navoff">Our Partners</a>
+      <a href="05 about guidon.html">About The GUIDON</a>
     </div>
 
 
@@ -288,14 +292,14 @@ On the other hand, external youth groups are considered given their previous eng
           <img src="Images/4 2 11.png" alt="" onclick="Youthappear(10)">
           <img src="Images/4 2 12.png" alt="" onclick="Youthappear(11)">
         </div>
-        <div class="Section2_2modal" onclick="Youthcancel()"></div>
-        <div class="Section2_2pop">
+        <div class="Section2_2modal mob" onclick="Youthcancel()"></div>
+        <div class="Section2_2pop mob">
           <img id="Youthimg" src="Images/4 2 1.png" alt="">
           <h5 id="Youthtitle">Kurit Bulawan</h5>
           <p id="Youthtag">Kurit Bulawan is the official student publication of Ateneo de Naga University Senior High School, serving as a bridge to inform students and communities both inside and outside the university by triggering public opinion that shapes social transformation. Established in 2018, a home for writers who act in accordance with their calling, “Standing on the pillars of truth,” marks our advocacy of preservation of rights, accountability of those who dismantled parts of the society, and balanced news reporting through print and broadcast.</p>
         </div>
       </div>
-      <footer class="footer"> <!-- Version 1.3 -->
+      <footer class="footer"> <!-- Version 2.2 -->
         <div class="leftfooter">
           <div class="footerimages">
             <img src="Images/Foreword Logo Text.png" alt="">
@@ -303,21 +307,18 @@ On the other hand, external youth groups are considered given their previous eng
           </div>
           <p>Foreword 2022 is a student-led event, with organizers belonging to The GUIDON's Beyond Loyola and Externals Staffs. The GUIDON is conducting this assembly in partnership with the Commission on Elections (COMELEC) and media partner ABS-CBN News Channel (ANC). All outputs pertaining to this event were curated following The GUIDON's editorial independence policies.</p>
           <div class="footericons">
-            <a href="https://www.youtube.com/user/TheGuidon"><img src="Images/Icon YT.png" alt=""></a>
-            <a href="https://www.facebook.com/TheGUIDON"><img src="Images/Icon FB.png" alt=""></a>
-            <a href="https://www.instagram.com/theguidon/"><img src="Images/Icon IG.png" alt=""></a>
-            <a href="https://theguidon.com/1112/main/"><img src="Images/Icon Twitter.png" alt=""></a>
-            <a href="https://twitter.com/TheGUIDON"><img src="Images/Icon Web.png" alt=""></a>
+            <a href="https://www.youtube.com/user/TheGuidon" target="_blank"><img src="Images/Icon YT.png" alt=""></a>
+            <a href="https://www.facebook.com/TheGUIDON" target="_blank"><img src="Images/Icon FB.png" alt=""></a>
+            <a href="https://www.instagram.com/theguidon/" target="_blank"><img src="Images/Icon IG.png" alt=""></a>
+            <a href="https://twitter.com/TheGUIDON" target="_blank"><img src="Images/Icon Twitter.png" alt=""></a>
+            <a href="https://theguidon.com" target="_blank"><img src="Images/Icon Web.png" alt=""></a>
           </div>
         </div>
         <div class="rightfooter nomob">
           <a href="index.html">Home</a>
-          <a href="01 about foreword.html">About Foreword</a>
-          <a href="02 livestream.html">Livestream</a>
           <a href="03 visions.html">Candidates' Visions</a>
           <a href="04 partners.html" class="Navoff">Our Partners</a>
           <a href="05 about guidon.html">About The GUIDON</a>
-          <a href="06 contactus.html">Contact Us</a>
         </div>
       </footer>
     </main>

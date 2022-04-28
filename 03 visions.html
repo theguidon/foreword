@@ -8,7 +8,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <!-- <script src="script.js"></script> -->
     <script type="text/javascript">
-    // Mobile Nav Version 2.0
+    // Mobile Nav Version 2.2
       function navopen() {
         document.getElementsByClassName('Modal')[0].style.visibility = "visible";
         document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
@@ -43,6 +43,10 @@
           Chevron.style.transform = "rotate(0deg)"
         }
       }
+      function CandidateVision(ClickedCandidate){
+        localStorage.setItem("ClickedVision", ClickedCandidate);
+        window.location = "02 Candidates Vision.html";
+      }
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
@@ -50,55 +54,17 @@
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
     // END OF NAV
-      function Vision(candnumber) {
-        document.getElementsByClassName("Section2pop")[0].style.visibility = "visible";
-        document.getElementsByClassName("Section2pop")[0].style.opacity = "1";
-        document.getElementsByClassName("Section2_1pop")[0].style.visibility = "visible";
-        document.getElementsByClassName("Section2_1pop")[0].style.opacity = "1";
-        document.getElementsByClassName("Section2_1mobpop")[0].style.visibility = "visible";
-        document.getElementsByClassName("Section2_1mobpop")[0].style.opacity = "1";
-        document.getElementById('ChangeID').style.color = "#0AA2D1";
-        // document.getElementsByTagName('main')[0].style.height = "50px";
-        change_cand(candnumber);
-      }
-      function Visionremove() {
-        document.getElementsByClassName("Section2pop")[0].style.visibility = "hidden";
-        document.getElementsByClassName("Section2pop")[0].style.opacity = "0";
-        document.getElementsByClassName("Section2_1pop")[0].style.visibility = "hidden";
-        document.getElementsByClassName("Section2_1pop")[0].style.opacity = "0";
-        document.getElementsByClassName("Section2_1mobpop")[0].style.visibility = "hidden";
-        document.getElementsByClassName("Section2_1mobpop")[0].style.opacity = "0";
-        document.getElementById('ChangeID').style.color = "black";
-        // document.getElementsByTagName('main')[0].style.height = "auto";
-      }
-      function change_cand(candnumber){
-
-
-        var candinfo = [
-        ["Leody De Guzman", "Leodegario \"Ka Leody\" Quitain de Guzman  born July 25, 1959) is a Filipino progressivist, unionist and labor rights activist. He was the former president and currently the chairperson of the Bukluran ng Manggagawang Pilipino, a socialist federation of militant trade unions. He was an aspirant in the 2019 senatorial elections, and is a candidate for the 2022 Philippine presidential elections under the Partido Lakas ng Masa.<br><br>De Guzman became involved in activism due to the aftermath of the assassination of popular anti-Marcos figure Benigno Aquino Jr. Galvanized by the wave of pro-democratic, anti-Marcos opposition protests that ensued, he joined the \"Tarlac to Tarmac\" march as well as other protests. He led the Aris Philippines branch of the budding Justice for Aquino, Justice for All (JAJA) movement.<br><br>De Guzman also became involved in organizing the workers of the factory against the dominant union and would become an organizer for Alyansa ng mga Manggagawa sa Pasig (ALMAPAS), a major labor coalition, from 1984 to 1990.<br><br>De Guzman was elected to the regional executive council of the militant labor federation Kilusang Mayo Uno (KMU) in 1991. However, because of increasing differences between KMU NCR and KMU national leadership, De Guzman joined other workers in forming an alternative labor federation, the Bukluran ng Manggagawang Pilipino (BMP)[5] alongside labor leaders such as Romy Castillo, Filemon 'Ka Popoy' Lagman, and Victor Briz. He was elected deputy secretary general of BMP at its formation in 1993, serving until 1996.", "Images/Candidate1mob.png", "Images/Cand1bg.png"],
-        ["Manny Pacquiao", "Emmanuel Dapidran Pacquiao Sr., born December 17, 1978, is a Filipino politician and former professional boxer. Nicknamed \"PacMan\", he is regarded as one of the greatest professional boxers of all time. He has been serving as a senator of the Philippines since 2016.<br><br>Pacquiao is the only eight-division world champion in the history of boxing and has won twelve major world titles. He was the first boxer to win the lineal championship in five different weight classes, the first boxer to win major world titles in four of the eight \"glamour divisions\" (flyweight, featherweight, lightweight, and welterweight), and is the only boxer to hold world championships across four decades (1990s, 2000s, 2010s, and 2020s). In July 2019, Pacquiao became the oldest welterweight world champion in history at the age of 40, and the first boxer in history to become a recognized four-time welterweight champion after defeating Keith Thurman to win the WBA (Super) welterweight title. As of 2015, Pacquiao's fights had generated $1.2 billion in revenue from his 25 pay-per-view bouts. According to Forbes, he was the second highest paid athlete in the world in 2015.<br><br>Pacquiao entered politics in 2010 when he was elected as the representative of Sarangani. He held this post for six years until he was elected and assumed office as a senator in 2016. He became the president of his party PDP–Laban in 2020 (which is disputed since 2021). On September 19, 2021, Pacquiao officially declared his candidacy for President of the Philippines in the 2022 Philippine presidential election. His plan to expand his political career led to his retirement from professional boxing 10 days later.", "Images/Candidate2mob.png", "Images/Cand2bg.png"],
-        ["Leni Robredo", "Maria Leonor \"Leni\" Gerona Robredo (born Maria Leonor Santo Tomas Gerona; April 23, 1965) is a Filipino lawyer, politician, and social activist who is the 14th and incumbent vice president of the Philippines. Robredo was the wife of the late interior secretary Jesse Robredo. She served as the representative of Camarines Sur's 3rd district from 2013 until her inauguration as vice president in 2016. In the vice presidential election, Robredo defeated Bongbong Marcos by a narrow margin of 263,473 votes. A report released by the Supreme Court further widened her lead to 278,566 over Marcos.<br><br>Robredo is the second woman to serve as vice president of the Philippines after Gloria Macapagal Arroyo and the first vice president from Bicol Region. In 2016, Robredo was awarded by the government of Thailand for her work and advocacy in women's empowerment and gender equality. Under her leadership, the Office of the Vice President also received the ISO 9001: 2015 certification for the office's quality management systems.<br><br>On October 7, 2021, Robredo announced her bid for presidency in the 2022 election.", "Images/Candidate3mob.png", "Images/Cand3bg.png"],
-        ["Bongbong Marcos", "Having been in public service for over 25 years, Ferdinand “Bongbong” Marcos Jr. has achieved a distinguished career in government. His electoral journey has allowed him to serve in several positions in both the executive and legislative branches of government. His various stints in government have allowed him to carve his niche in the Philippine’s rich political history.<br><br>As a young boy in Manila, Bongbong went to Institucion Teresiana and La Salle Greenhills in Manila where he obtained his kindergarten and elementary education, respectively. Due to his parents’ insistence that he grow up grounded without being overwhelmed by his family’s stature, Bongbong was sent to England where he lived and studied in an all-boys Benedictine abbey, Worth School. Thereafter, he pursued his undergraduate degree, graduating with a Special Diploma in Social Studies from Oxford University in England.<br><br>In his desire to pursue further studies, Bongbong took up Masters in Business Administration in Wharton School of Business, University of Pennsylvania in Philadelphia, USA. Though he felt privileged to enter such an esteemed institution, he had to cut his studies short because he was elected Vice-Governor of the province of Ilocos Norte in 1981, at a young age of 23. He succeeded as Governor of the province from 1983 to 1986.", "Images/Candidate4mob.png", "Images/Cand4bg.png"],
-        ["Ping Lacson", "Senator Panfilo “Ping” Morena Lacson, who has been circumspect in matters of public interest and committed against various forms of corruption in his more than 50 years of public service in the fields of law enforcement, lawmaking, and humanitarian work.<br><br>Lacson is an untiring, tenacious watchdog of the national budget, making sure dubious congressional insertions (a.k.a. pork barrel) and useless appropriations are checked and deleted during plenary debates. His continuous fight against corruption, including pork barrel in all its iterations, earned him the degree of Doctor of Laws, Honoris Causa, from the Pamantasan ng Lungsod ng Maynila in March 2019.<br><br>On Feb. 19, 2022, Lacson received from his Alma Mater, the Philippine Military Academy, the Lifetime Achievement Award in recognition of his \"more than 50 years of dedicated, exemplary and unblemished service to the country characterized by his faithful adherence to the virtues of Courage, Loyalty and Integrity.\"<br><br>Lacson first earned a tough, no-nonsense reputation while serving in the Philippine National Police: solving high-profile crimes including kidnap-for-ransom cases in the 1980s and 1990s; and reviving the PNP’s glory days as Chief, PNP from 1999 to 2001.<br><br>During his term as PNP Chief, Lacson led by example as he instituted a no-take policy and a fitness program, while cleansing the police force of \“scalawags in uniform\” (a.k.a. kotong cops) – initiatives that earned the PNP the highest public approval ratings in its history.", "Images/Candidate5mob.png", "Images/Cand5bg.png"],
-        ["Isko Moreno", 'Francisco “Isko” Moreno Domagoso (born October 24, 1974), is a Filipino politician and actor currently serving as the 22nd mayor of Manila since 2019.<br><br>Before heading the capital of the Philippines, he first gained notability as an actor and television personality. He entered politics in 1998, and ran for city councilor and was elected for three consecutive terms. In 2007, he ran as vice mayor of Manila and was elected for three consecutive terms. In 2016, He was term-limited as vice mayor and unsuccessfully ran for senator in the 2016 senatorial elections. He placed 16th out of 50 candidates. He then served in the Duterte cabinet as social welfare undersecretary for a few months in 2018 before running and being elected mayor of Manila in a landslide victory against his former allies Joseph Estrada and Alfredo Lim in the 2019 local elections.<br><br>Moreno has described his leadership style as akin to that of his predecessor Alfredo Lim, citing their shared commitment in reducing crime and maintaining cleanliness of the capital. Moreno is also noted for his streetwise public image due to his use of colorful language coupled with Manila street slang. As a result, he was catapulted into prominence and is colloquially referred to as Yorme, a verlan backslang metathesis of the English word, mayor, used in Taglish and reversed phonemically as part of Filipino/Tagalog street slang. Whether the word is Tagalog or Taglish, it is the way of reversing or jumbling of syllables so as to create local colloquial words.<br><br>On September 22, 2021, Moreno announced his bid for the Philippine presidency in the 2022 election.', "Images/Candidate6mob.png", "Images/Cand6bg.png"]]
-
-        candnumber = (candnumber + candinfo.length) % candinfo.length;
-        document.getElementsByClassName('popimg')[0].src = candinfo[candnumber][2];
-        document.getElementById('changename').innerHTML = candinfo[candnumber][0];
-        document.getElementById('changedes').innerHTML = candinfo[candnumber][1];
-        document.getElementsByClassName('S2_1imgflex')[0].style.backgroundImage = "url('" + candinfo[candnumber][3] + "')";
-        document.getElementById('imgleft').setAttribute( "onClick", "change_cand(" + (candnumber - 1) + ")" );
-        document.getElementById('imgright').setAttribute( "onClick", "change_cand(" + (candnumber + 1) + ")" );
-
-
-      }
+    function CandidateVision(ClickedCandidate){
+      localStorage.setItem("ClickedVision", ClickedCandidate);
+      window.location = "02 Candidates Vision.html";
+    }
 
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 2.0 -->
+    <nav> <!-- Version 2.2 -->
       <span class="Nav-left">
         <a href="">
           <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
@@ -107,18 +73,18 @@
       </span>
       <span class="Nav-right nomob">
        <a href="index.html">Home</a>
-       <a href="03 visions.html">Candidates' Visions</a>
+       <a href="03 visions.html" class="Navoff">Candidates' Visions</a>
        <a href="04 partners.html">Our Partners</a>
-       <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+       <a href="05 about guidon.html">About The GUIDON</a>
        <img class="navburger nomob" src="Images/Navburgerpc.png" alt="" onclick="navhover()">
       </span>
-      <div class="ExtraNav">
-        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+      <div class="ExtraNav" style="display: none;">
+        <div class="ExtraNavCont" onclick="CandidateVision(0)">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(1)">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(2)">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(3)">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(4)">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(5)">PACQUIAO, Manny</div>
       </div>
       <div class="ExtraNavModal" onclick="navhover()"></div>
 
@@ -130,12 +96,12 @@
       <a href="index.html">Home</a>
       <a onclick="ExtraNavmob()">Candidates' Visions &nbsp<img src="Images/Chevron.png" class="Chevron" alt=""></a>
       <div class="ExtraNavmob mob">
-        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(0)">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(1)">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(2)">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(3)">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(4)">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(5)">PACQUIAO, Manny</div>
       </div>
       <a href="04 partners.html">Our Partners</a>
       <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
@@ -151,47 +117,97 @@
         <div class="FlexCont">
           <div class="FlexCandidates">
             <div class="FlexitemCandidates">
+              <div class="Hoverlay2" alt="" onclick="CandidateVision(0)">
+                <img src="Images/Icon right.png">
+              </div>
               <img src="Images/Cand1.png" alt="">
               <h2>Ernesto Abella</h2>
-              <p>Party: Independent
+              <p><b>Party:</b> Independent<br><br>
 
-Latest Position: Undersecretary for Strategic Communications and Research, Department of Foreign Affairs (2017-2021)
+<b>Latest Position:</b> Undersecretary for Strategic Communications and Research, Department of Foreign Affairs (2017-2021)
+<br><br>
+Ernesto “Ernie” Corpuz Abella was the Presidential spokesperson of incumbent President Rodrigo Duterte from 2016 to 2017. Soon after, he served as the Undersecretary of the Department of Foreign Affairs under the same administration until he filed his certificate of candidacy for the 2022 Presidential elections.
+<br><br>
+Apart from his strong association with the Duterte government, Abella has ventured into the field of business, writing, and pastorship. In particular, he served as the chief executive officer of AZ Agri-Products and chief operating officer of F&P Agri-Inputs, with both companies based in Davao City.
+Given his immersed background in the agriculture sector, Abella champions plans to improve the country’s food security.
+<br><br>
+He is an alumnus of Ateneo de Davao University. At 72, he hopes to become President and develop a government who “listens” to the people.
 
-
-Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evangelist who served in President Rodrigo Duterte's administration as Presidential Spokesperson and Undersecretary for Strategic Communications and Research of the Department of Foreign Affairs.
 </p>
             </div>
             <div class="HLine"></div>
             <div class="FlexitemCandidates">
+              <div class="Hoverlay2" alt="" onclick="CandidateVision(1)">
+                <img src="Images/Icon right.png">
+              </div>
               <img src="Images/Cand2.png" alt="">
               <h2>Leody De Guzman</h2>
-              <p></p>
+              <p><b>Party:</b> Partido Lakas ng Masa<br><br>
+
+<b>Latest Position:</b> Labor Leader
+<br><br>
+Leodegario “Ka Leody” Quitain de Guzman is a labor leader who is most known for his role as former president of the Bukluran ng Manggagawang Pilipino. Currently, he is a chairperson within the aforementioned federation, and is also affiliated with PhilRights and Bulig Visayas, the International Council of the International Center for Labor Solidarity, and the Asia Regional Organization of Bank, Insurance and Finance Union.
+<br><br>
+Vocally pro-worker and anti-capitalist, de Guzman’s platform is involves challenging contractualization, decreeing minimum wage, and increasing the taxes for billionaires. He has been active in promoting transition to a “green economy,” encouraging the modernization of agriculture, and criticizing the key enforcers of Rodrigo Duterte’s controversial drug war.
+<br><br>
+de Guzman firmly believes that true progress will only be achievable once the nation establishes a just and egalitarian society. If elected, he sets his sights on upholding climate justice, empowering workers, and demilitarizing the government—with the institutionalization of human rights measures at the very core of it all.</p>
             </div>
             <div class="HLine"></div>
             <div class="FlexitemCandidates">
+              <div class="Hoverlay2" alt="" onclick="CandidateVision(2)">
+                <img src="Images/Icon right.png">
+              </div>
               <img src="Images/Cand3.png" alt="">
               <h2>Norberto Gonzales</h2>
-              <p></p>
+              <p><b>Party:</b> Philippine Democratic Socialist Party<br><br>
+
+<b>Latest Position:</b> Secretary of National Defense (2007-2010)
+<br><br>
+Norberto Borja Gonzales was the National Defense Secretary and National Security adviser of former President Gloria Macapagal Arroyo. He is known for his experience in peace talk encounters with militant organizations such as the Moro Islamic Liberation Front, Moro National Liberation Front, and the National Democratic Front.
+<br><br>
+Gonzales has long advocated for the transformation of the current political structure into a parliamentary system. In fact, he has dealt with a massive contract controversy with United States-based law firm Venable LLP about Arroyo’s undisclosed plans for charter change.
+<br><br>
+With his background as the chair of the Philip­pine Democratic Socialist Party–a progressive party list established during the Marcos dictatorship, Gonzales emphasizes that his administration would recognize the importance and necessity of peaceful protest movements and expressions of dissent.
+<br><br>
+In the May elections, Gonzales hopes to convince the Filipino people that his background in national security and passion to help the agricultural sector would greatly benefit the country in the next six years.</p>
             </div>
             <div class="HLine"></div>
           </div>
-          <div class="FlexCandidates">
+          <div class="FlexCandidates" style="width: 400px;">
             <div class="FlexitemCandidates">
+              <div class="Hoverlay2" alt="" onclick="CandidateVision(3)">
+                <img src="Images/Icon right.png">
+              </div>
               <img src="Images/Cand4.png" alt="">
               <h2>Ping Lacson</h2>
-              <p></p>
+              <p><b>Party:</b> Partido para sa Demokratikong Reporma<br><br>
+
+<b>Latest Position:</b> Senator since 2016
+<br><br>
+Having served in government for more than 40 years, Senator Panfilo “Ping” Morena Lacson is completing his third and final term in the upper chamber. As a veteran lawmaker, Lacson did not shy away from authoring controversial laws such as the Anti-Terrorism Act in 2020, the Anti-Hazing Act of 2018, and the Reproductive Health Act of 2011.
+<br><br>
+Prior to his legislative career, Lacson was with the Metrocom Intelligence Security Group that was responsible for the attacks on activists during Ferdinand Marcos Sr.’s regime. After his promotion to Philippine National Police Chief, Lacson made headlines for saving numerous Kidnapping For Ransom victims.
+<br><br>
+As Lacson eyes the presidency for the second time, he hopes to restore public trust in the government through various legislative and bureaucratic reforms.
+<br><br>
+Editor’s Note: Lacson’s spokesperson and former Magdalo Representative Ace Acedillo was interviewed on behalf of Lacson</p>
             </div>
             <div class="HLine"></div>
             <div class="FlexitemCandidates">
+              <div class="Hoverlay2" alt="" onclick="CandidateVision(4)">
+                <img src="Images/Icon right.png">
+              </div>
               <img src="Images/Cand5.png" alt="">
               <h2>Jose Montemayor</h2>
-              <p></p>
-            </div>
-            <div class="HLine"></div>
-            <div class="FlexitemCandidates">
-              <img src="Images/Cand6.png" alt="">
-              <h2>Manny Pacquiao</h2>
-              <p></p>
+              <p><b>Party:</b> Democratic Party of The Philippines<br><br>
+
+<b>Latest Position:</b> Cardiologist
+<br><br>
+Jose Montemayor Jr. is a first-time candidate for public office. Working primarily as a cardiologist for major hospitals, he claims to bring to the table medical, legal, and economical perspectives that have enriched his platform.
+<br><br>
+Montemayor has continually expressed his strong stance of being anti-death penalty, anti-same sex marriage and anti-abortion (except for medical reasons). Regarding policy changes he hopes to implement, he has mentioned the importance of restructuring the justice system, promoting a Christ-centered government, and identifying China as a security threat in lieu of West Philippine Sea ownership.
+<br><br>
+His 10-point agenda includes intentions for educational reforms, agricultural advancement, and negotiations with rebel groups. Should he be elected, Montemayor vows to address criminality and corruption by all means necessary. Additionally, he has promised support for overseas Filipino workers, press freedom for local journalists, and economic prosperity for all.</p>
             </div>
             <div class="HLine"></div>
           </div>
@@ -205,7 +221,7 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
         <p class="Section2Text">Click on the thumbnails below to view the candidate’s Foreword 2022 interview.</p>
 
         <div class="Section2flex">
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          <div class="Section2flexitem" onclick="CandidateVision(0)">
             <div class="Hoverlay">
               <img src="Images/Icon right.png" alt="">
             </div>
@@ -219,7 +235,7 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
               </div>
             </div>
           </div>
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          <div class="Section2flexitem" onclick="CandidateVision(1)">
             <div class="Hoverlay">
               <img src="Images/Icon right.png" alt="">
             </div>
@@ -233,7 +249,7 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
               </div>
             </div>
           </div>
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          <div class="Section2flexitem" onclick="CandidateVision(2)">
             <div class="Hoverlay">
               <img src="Images/Icon right.png" alt="">
             </div>
@@ -247,7 +263,7 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
               </div>
             </div>
           </div>
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          <a class="Section2flexitem" href="EMPTY" target="_blank">
             <div class="Hoverlay">
               Links to an External Page
             </div>
@@ -255,13 +271,13 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
             <div class="Section2flexitem2">
               <img src="Images/logosYT.png" alt="">
               <div class="Section2flexitem3">
-                <h2>Foreword 2022<br>Mechanics Explainer</h2>
+                <h2>Watch The Interviews on our<br>Official YouTube channel</h2>
                 <div class="Line2"></div>
-                <p>Learn all the mechanics on Foreword’s Presidential Candidates’ Assembly event.</p>
+                <p>Watch all 5 Presidential Candidate Interviews on The GUIDON’s Official YouTube channel</p>
               </div>
             </div>
-          </div>
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          </a>
+          <div class="Section2flexitem" onclick="CandidateVision(3)">
             <div class="Hoverlay">
               <img src="Images/Icon right.png" alt="">
             </div>
@@ -275,7 +291,7 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
               </div>
             </div>
           </div>
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          <div class="Section2flexitem" onclick="CandidateVision(4)">
             <div class="Hoverlay">
               <img src="Images/Icon right.png" alt="">
             </div>
@@ -289,21 +305,21 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
               </div>
             </div>
           </div>
-          <div class="Section2flexitem" onclick="CandidateVision()">
+          <a class="Section2flexitem" href="EMPTY" target="_blank">
             <div class="Hoverlay">
-              <img src="Images/Icon right.png" alt="">
+              Links to an External Page
             </div>
             <img src="Images/0 2 7.png" alt="">
             <div class="Section2flexitem2">
-              <img src="Images/Cand6.png" alt="">
+              <img src="Images/logosYT.png" alt="">
               <div class="Section2flexitem3">
-                <h2>Manny Pacquiao<br>Full Interview</h2>
+                <h2>Foreword 2022<br>Mechanics Explainer</h2>
                 <div class="Line2"></div>
-                <p>Senator Manny Pacquiao discusses his experience in senate and his plans as President.</p>
+                <p>Learn all the mechanics on Foreword’s Presidential Candidates’ Assembly event.</p>
               </div>
             </div>
-          </div>
-          <a class="Section2flexitem" href="#">
+          </a>
+          <a class="Section2flexitem" href="EMPTY" target="_blank">
             <div class="Hoverlay">
               Links to an External Page
             </div>
@@ -313,13 +329,13 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
               <div class="Section2flexitem3">
                 <h2>Watch The Interviews on our<br>Official Facebook page</h2>
                 <div class="Line2"></div>
-                <p>Watch all 6 Presidential Candidate Interviews on The GUIDON’s Official Facebook page.</p>
+                <p>Watch all 5 Presidential Candidate Interviews on The GUIDON’s Official Facebook page.</p>
               </div>
             </div>
           </a>
         </div>
       </div>
-      <footer class="footer"> <!-- Version 1.3 -->
+      <footer class="footer"> <!-- Version 2.2 -->
         <div class="leftfooter">
           <div class="footerimages">
             <img src="Images/Foreword Logo Text.png" alt="">
@@ -327,21 +343,18 @@ Ernesto "Ernie" Corpus Abella is a Filipino businessman, writer and former evang
           </div>
           <p>Foreword 2022 is a student-led event, with organizers belonging to The GUIDON's Beyond Loyola and Externals Staffs. The GUIDON is conducting this assembly in partnership with the Commission on Elections (COMELEC) and media partner ABS-CBN News Channel (ANC). All outputs pertaining to this event were curated following The GUIDON's editorial independence policies.</p>
           <div class="footericons">
-            <a href="https://www.youtube.com/user/TheGuidon"><img src="Images/Icon YT.png" alt=""></a>
-            <a href="https://www.facebook.com/TheGUIDON"><img src="Images/Icon FB.png" alt=""></a>
-            <a href="https://www.instagram.com/theguidon/"><img src="Images/Icon IG.png" alt=""></a>
-            <a href="https://theguidon.com/1112/main/"><img src="Images/Icon Twitter.png" alt=""></a>
-            <a href="https://twitter.com/TheGUIDON"><img src="Images/Icon Web.png" alt=""></a>
+            <a href="https://www.youtube.com/user/TheGuidon" target="_blank"><img src="Images/Icon YT.png" alt=""></a>
+            <a href="https://www.facebook.com/TheGUIDON" target="_blank"><img src="Images/Icon FB.png" alt=""></a>
+            <a href="https://www.instagram.com/theguidon/" target="_blank"><img src="Images/Icon IG.png" alt=""></a>
+            <a href="https://twitter.com/TheGUIDON" target="_blank"><img src="Images/Icon Twitter.png" alt=""></a>
+            <a href="https://theguidon.com" target="_blank"><img src="Images/Icon Web.png" alt=""></a>
           </div>
         </div>
         <div class="rightfooter nomob">
           <a href="index.html">Home</a>
-          <a href="01 about foreword.html">About Foreword</a>
-          <a href="02 livestream.html">Livestream</a>
           <a href="03 visions.html" class="Navoff">Candidates' Visions</a>
           <a href="04 partners.html">Our Partners</a>
           <a href="05 about guidon.html">About The GUIDON</a>
-          <a href="06 contactus.html">Contact Us</a>
         </div>
       </footer>
     </main>

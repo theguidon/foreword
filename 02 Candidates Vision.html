@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Foreword Home</title>
+    <title>Candidate's Vision</title>
     <link rel="stylesheet" href="CSS/CandidateVision.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <script type="text/javascript">
-    // Mobile Nav Version 2.1
+    // Mobile Nav Version 2.2
       function navopen() {
         document.getElementsByClassName('Modal')[0].style.visibility = "visible";
         document.getElementsByClassName('Modal')[0].style.opacity = "0.5";
@@ -36,14 +36,16 @@
         var Chevron = document.getElementsByClassName("Chevron")[0];
         if (ExtraNavmob.style.height == "0px") {
           ExtraNavmob.style.height = "210px";
-          Chevron.style.transform = "rotate(-180deg)";
+          Chevron.style.transform = "rotate(-180deg)"
         } else {
           ExtraNavmob.style.height = "0px";
-          Chevron.style.transform = "rotate(0deg)";
+          Chevron.style.transform = "rotate(0deg)"
         }
       }
-      function CandidateVision(){
-        console.log("unfinished");
+      function CandidateVision(ClickedCandidate){
+        localStorage.setItem("ClickedVision", ClickedCandidate);
+        //EXCEPTION FOR THIS Page
+        Candidate(ClickedCandidate);
       }
       window.onresize = function (e) {
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
@@ -52,6 +54,9 @@
         document.getElementsByTagName('main')[0].style.marginTop = document.getElementsByTagName('nav')[0].clientHeight + "px";
       }
     // END OF NAV
+    window.onload = function (e) {
+      Candidate(parseInt(localStorage.getItem("ClickedVision")));
+    }
 
       function InfographicToggle(){
         var InfoModal = document.getElementsByClassName("InfographicModal")[0];
@@ -67,21 +72,22 @@
 
       function Candidate(Candnumber){
         var CandidateLinks = [];
+        var CandidateDes = ["<b>Party:</b> Independent<br><br><b>Latest Position:</b> Undersecretary for Strategic Communications and Research, Department of Foreign Affairs (2017-2021)<br><br>Ernesto “Ernie” Corpuz Abella was the Presidential spokesperson of incumbent President Rodrigo Duterte from 2016 to 2017. Soon after, he served as the Undersecretary of the Department of Foreign Affairs under the same administration until he filed his certificate of candidacy for the 2022 Presidential elections.<br><br>Apart from his strong association with the Duterte government, Abella has ventured into the field of business, writing, and pastorship. In particular, he served as the chief executive officer of AZ Agri-Products and chief operating officer of F&P Agri-Inputs, with both companies based in Davao City. Given his immersed background in the agriculture sector, Abella champions plans to improve the country’s food security.<br><br>He is an alumnus of Ateneo de Davao University. At 72, he hopes to become President and develop a government who \“listens\” to the people.", "<b>Party:</b> Partido Lakas ng Masa<br><br><b>Latest Position:</b> Labor Leader<br><br>Leodegario “Ka Leody” Quitain de Guzman is a labor leader who is most known for his role as former president of the Bukluran ng Manggagawang Pilipino. Currently, he is a chairperson within the aforementioned federation, and is also affiliated with PhilRights and Bulig Visayas, the International Council of the International Center for Labor Solidarity, and the Asia Regional Organization of Bank, Insurance and Finance Union.<br><br>Vocally pro-worker and anti-capitalist, de Guzman’s platform is involves challenging contractualization, decreeing minimum wage, and increasing the taxes for billionaires. He has been active in promoting transition to a “green economy,” encouraging the modernization of agriculture, and criticizing the key enforcers of Rodrigo Duterte’s controversial drug war.<br><br>de Guzman firmly believes that true progress will only be achievable once the nation establishes a just and egalitarian society. If elected, he sets his sights on upholding climate justice, empowering workers, and demilitarizing the government—with the institutionalization of human rights measures at the very core of it all.", "<b>Party:</b> Philippine Democratic Socialist Party<br><br><b>Latest Position:</b> Secretary of National Defense (2007-2010)<br><br>Norberto Borja Gonzales was the National Defense Secretary and National Security adviser of former President Gloria Macapagal Arroyo. He is known for his experience in peace talk encounters with militant organizations such as the Moro Islamic Liberation Front, Moro National Liberation Front, and the National Democratic Front.<br><br>Gonzales has long advocated for the transformation of the current political structure into a parliamentary system. In fact, he has dealt with a massive contract controversy with United States-based law firm Venable LLP about Arroyo’s undisclosed plans for charter change.<br><br>With his background as the chair of the Philip­pine Democratic Socialist Party–a progressive party list established during the Marcos dictatorship, Gonzales emphasizes that his administration would recognize the importance and necessity of peaceful protest movements and expressions of dissent.<br><br>In the May elections, Gonzales hopes to convince the Filipino people that his background in national security and passion to help the agricultural sector would greatly benefit the country in the next six years.", "<b>Party:</b> Partido para sa Demokratikong Reporma<br><br><b>Latest Position:</b> Senator since 2016<br><br>Having served in government for more than 40 years, Senator Panfilo “Ping” Morena Lacson is completing his third and final term in the upper chamber. As a veteran lawmaker, Lacson did not shy away from authoring controversial laws such as the Anti-Terrorism Act in 2020, the Anti-Hazing Act of 2018, and the Reproductive Health Act of 2011.<br><br>Prior to his legislative career, Lacson was with the Metrocom Intelligence Security Group that was responsible for the attacks on activists during Ferdinand Marcos Sr.’s regime. After his promotion to Philippine National Police Chief, Lacson made headlines for saving numerous Kidnapping For Ransom victims.<br><br>As Lacson eyes the presidency for the second time, he hopes to restore public trust in the government through various legislative and bureaucratic reforms.<br><br>Editor’s Note: Lacson’s spokesperson and former Magdalo Representative Ace Acedillo was interviewed on behalf of Lacson", "<b>Party:</b> Democratic Party of The Philippines<br><br><b>Latest Position:</b> Cardiologist<br><br>Jose Montemayor Jr. is a first-time candidate for public office. Working primarily as a cardiologist for major hospitals, he claims to bring to the table medical, legal, and economical perspectives that have enriched his platform.<br><br>Montemayor has continually expressed his strong stance of being anti-death penalty, anti-same sex marriage and anti-abortion (except for medical reasons). Regarding policy changes he hopes to implement, he has mentioned the importance of restructuring the justice system, promoting a Christ-centered government, and identifying China as a security threat in lieu of West Philippine Sea ownership.<br><br>His 10-point agenda includes intentions for educational reforms, agricultural advancement, and negotiations with rebel groups. Should he be elected, Montemayor vows to address criminality and corruption by all means necessary. Additionally, he has promised support for overseas Filipino workers, press freedom for local journalists, and economic prosperity for all."];
+  var CandidateName = ["Ernesto Abella", "Leody De Guzman", "Noberto Gonzales", "Ping Lacson", "Jose Montemayor Jr."];
         document.getElementsByClassName("Changevid")[0];
-        document.getElementsByClassName("ChangeBG")[0];
-        document.getElementsByClassName("ChangeImg")[0];
-        document.getElementsByClassName("ChangeName")[0];
-        document.getElementsByClassName("ChangeDes")[0];
-        // console.log(document.getElementsByClassName("ChangeOnclick")[0].onclick);
-        document.getElementsByClassName("ChangeOnclick")[0].setAttribute( "onClick", "Candidate(" + String((Candnumber - 1 + 6) % 6) + ")" );
-        document.getElementsByClassName("ChangeOnclick")[1].setAttribute( "onClick", "Candidate(" + String((Candnumber + 1) % 6) + ")" );
+        document.getElementsByClassName("ChangeBG")[0].style.backgroundImage = "url('Images/Cand BG" + String(Candnumber + 1) + ".png')";
+        document.getElementsByClassName("ChangeImg")[0].src = "Images/Cand" + String(Candnumber + 1)+ "v.png";
+        document.getElementsByClassName("ChangeName")[0].innerHTML = CandidateName[Candnumber];
+        document.getElementsByClassName("ChangeDes")[0].innerHTML = CandidateDes[Candnumber];
+        document.getElementsByClassName("ChangeOnclick")[0].setAttribute( "onClick", "Candidate(" + String((Candnumber - 1 + 5) % 5) + ")" );
+        document.getElementsByClassName("ChangeOnclick")[1].setAttribute( "onClick", "Candidate(" + String((Candnumber + 1) % 5) + ")" );
       }
     </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <link rel="icon" href="Images/Foreword Logo C.png">
   </head>
   <body>
-    <nav> <!-- Version 2.0 -->
+    <nav> <!-- Version 2.2 -->
       <span class="Nav-left">
         <a href="">
           <img class="Home nomob" src="Images/Foreword Logo White.png" alt="">
@@ -92,16 +98,16 @@
        <a href="index.html">Home</a>
        <a href="03 visions.html">Candidates' Visions</a>
        <a href="04 partners.html">Our Partners</a>
-       <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+       <a href="05 about guidon.html">About The GUIDON</a>
        <img class="navburger nomob" src="Images/Navburgerpc.png" alt="" onclick="navhover()">
       </span>
       <div class="ExtraNav" style="display: none;">
-        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(0)">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(1)">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(2)">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(3)">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(4)">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(5)">PACQUIAO, Manny</div>
       </div>
       <div class="ExtraNavModal" onclick="navhover()"></div>
 
@@ -113,15 +119,15 @@
       <a href="index.html">Home</a>
       <a onclick="ExtraNavmob()">Candidates' Visions &nbsp<img src="Images/Chevron.png" class="Chevron" alt=""></a>
       <div class="ExtraNavmob mob">
-        <div class="ExtraNavCont" onclick="ExtraNav()">ABELLA, Ernesto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">DE GUZMAN, Leody</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">GONZALES, Norberto</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">LACSON, Ping</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">MONTEMAYOR, Jose</div>
-        <div class="ExtraNavCont" onclick="ExtraNav()">PACQUIAO, Manny</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(0)">ABELLA, Ernesto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(1)">DE GUZMAN, Leody</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(2)">GONZALES, Norberto</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(3)">LACSON, Ping</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(4)">MONTEMAYOR, Jose</div>
+        <div class="ExtraNavCont" onclick="CandidateVision(5)">PACQUIAO, Manny</div>
       </div>
       <a href="04 partners.html">Our Partners</a>
-      <a href="05 about guidon.html" class="Navoff">About The GUIDON</a>
+      <a href="05 about guidon.html">About The GUIDON</a>
     </div>
 
 
@@ -134,7 +140,7 @@
       <div class="Section1">
         <iframe style="ChangeVid" width="560" height="315" src="https://www.youtube.com/embed/tgB1wUcmbbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div class="ChangeBG Section2" style="background-image: url('Images/2 Section1.png');">
+      <div class="ChangeBG Section2" style="background-image: url('Images/Cand BG1.png');">
         <div class="Section2_1">
           <div class="Section2_1_1">
 
@@ -213,38 +219,36 @@
                   </div>
                 </div>
               </div>
-              <div class="Section2flexitem" onclick="Candidate(5)">
+              <a class="Section2flexitem" href="EMPTY" target="_blank">
                 <div class="Hoverlay">
-                  <img src="Images/Icon right.png" alt="">
+                  Links to an External Page
                 </div>
                 <img src="Images/0 2 7.png" alt="">
                 <div class="Section2flexitem2">
-                  <img src="Images/Cand6.png" alt="">
+                  <img src="Images/logosYT.png" alt="">
                   <div class="Section2flexitem3">
-                    <h2>Manny Pacquiao<br>Full Interview</h2>
+                    <h2>Foreword 2022<br>Mechanics Explainer</h2>
                     <div class="Line2"></div>
-                    <p>Senator Manny Pacquiao discusses his experience in senate and his plans as President.</p>
+                    <p>Learn all the mechanics on Foreword’s Presidential Candidates’ Assembly event.</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="Section2_1_2">
-            <h1 class="Section2Header">The Presidential Candidates’ Assembly</h1>
-            <div class="Line2"></div>
-            <p class="Section2Text">Click on the thumbnails below to view the candidate’s Foreword 2022 interview.</p>
             <div class="Section2_1_2flex">
               <img class="infographic" src="Images/Infographic.png" alt=""  onclick="InfographicToggle()">
-              <p>The infographic to the right details the heights, escapades, and tribulous triumphs of one Rexum Palanca, multi-billion dollar owner of Solux Industries and Tier I Avenger™(© 2022 Marvel, Inc.)! learn more about Rexum Palanca in the infographic to the right as it details the penultimate pinnacle of Palanca’s palpatatingly pernicious propaganda-packed patrol of peril - latest edition! Dial 09456344956 for more info on how you, YES you, can avail of a copy of Rexum Palanca’s newly published New York Time’s best-selling and critically acclaimed novel, To The Sun and Back. If you call right now, you will also be able to get an autographed Rexum Palanca poster and a one-of-a-kind NFT of Palanca’s self portrait Virtual Escape valued by Christie’s at 129,424.71 ETH, 9631.32 Bitcoin, $380,000,000, ₱19,857,662,366.44, or 420 SUN. Call now and allocate your funds to the newest cryptoventure today, don’t miss out on SUN token’s bi-semanal price hike of 530% this election day.<br>
-<br>
-All Rights Reserved © Walt Disney Studios, MMXXII<br>
-<br>
-Special thanks to:<br>
-Stark Industries<br>
-Oscorp<br>
-Pym Technologies<br>
-Parker Industries<br>
-The Daily Bugle</p>
+              <div class="Section2_1_2flexright">
+                <h4>Candidate Infographic</h4>
+                <div class="Line2"></div>
+                <p class="smallerpar">Click on the thumbnail to view the infographic in full screen.</p>
+                <p>As the country gears up for the May presidential elections, it is important to step back and remember the plans, platforms, and policies behind the faces of each presidential candidate.
+  <br><br>
+  Former Presidential Spokesperson Ernesto Abella sees a hyper-industrialized agricultural sector and an increase in citizen empowerment in his vision as the next Philippine president.
+  <br><br>
+  Secretary Abella is running as an independent presidential candidate in the 2022 National Elections.</p>
+              </div>
+
             </div>
           </div>
         </div>
@@ -256,13 +260,22 @@ The Daily Bugle</p>
           </div>
           <h2>Candidate Profile</h2>
           <h1 class="ChangeName">Ernesto Abella</h1>
-          <p class="ChangeDes">Looking to avenge his dead father after the Battle of New York in 2012, Rexum vows to never again bear witness to atrocities against the good of mankind. As President of The GUIDON Rexum intends to rule with an iron fist. While other leaders lead with fear, Rexum intends to lead with respect. With regards to the current state of order and governance in the organization, Rexum had this to say, “I have never witnessed such injustice as I’ve seen in the corridors and backrooms of Ateneo’s Online Learning Campus since Loki vaporized my father right in front of my eyes on that fateful day in New York in 2012.” This election cycle has been particularly tough as it not only marks the 10th death anniversary of his father, but also the 4th death anniversary of his mother who passed away at the hands of Ebony Maw’s assault on Bleecker St. in 2018. It was on that fateful day in Midgard where Rexum vowed to Avenge™ said parents and bring justice throughout the Multiverse™. As our country continues to reel from the effects of “The Blip” 4 years ago, Rexum vows to lead us into a new promised land and prove Thanos wrong by creating the proper systems to maximize our resources in a renewable manner and mitigate the long-term detriments of overpopulation and overconsumption. “Overconsumption is the major problem facing humanity in the 21st century”, said Rexum at the UN Climate Change Conference 2022. In talks with Abbott & Costello, Rexum Palanca learned the biomechanics of photosynthesis and has since been able to develop a non-retail prototype tailored for personal use. Rexum began developing this photosynthesis biochip in 2017 during the Bitcoin Pump of December. Since then Rexum has refined the design and currently has embedded in his scalp a CentennialSolus v2.4 fully-functional model. This chip embedded into Rexum Palanca’s lower brain stem communicates with receivers in his lower digestive tract and epidermis nerves of the somatic nervous system to receive the heat from direct sunlight and directly convert it into calories for his digestive system to process. This innovative new device is currently dubbed “CentennialSolus” for its optimistic goals of extending life by 100 years by virtue of photosynthesis. Rexum Palanca claims that his expertise in the field of solar power can help elevate the Philippines to a global superpower within his term if elected President. “A new horizon awaits humanity,” Rexum Palanca said at Solux’s annual shareholders meeting last March 18th, “By the turn of the 22nd century, Homo Sapiens as a species will be known throughout the Galaxy as a superior Type 3 civilization of immortal beings not to be reckoned with!” The preceding statement was then followed by rapturous applause as the newly launched cryptocurrency/NFT-backed Stock “SOLUS” (Nasdaq ticker SUN, cryptocurrency token acronym/name SUN / Solumbara) went up 478% in intra-day trading at Wall Street with the coin tunning up 5300% in 2 hours after the shareholders meeting, much to the chagrin to the Rexum’s Solux Play-To-Earn competitors in the crypto space.
-“If I am to be remembered as one thing, I seek to be known as Rexum Rex Caesar, the Destroyer of Worlds.”</p>
+          <p class="ChangeDes"><b>Party:</b> Independent<br><br>
+
+<b>Latest Position:</b> Undersecretary for Strategic Communications and Research, Department of Foreign Affairs (2017-2021)
+<br><br>
+Ernesto “Ernie” Corpuz Abella was the Presidential spokesperson of incumbent President Rodrigo Duterte from 2016 to 2017. Soon after, he served as the Undersecretary of the Department of Foreign Affairs under the same administration until he filed his certificate of candidacy for the 2022 Presidential elections.
+<br><br>
+Apart from his strong association with the Duterte government, Abella has ventured into the field of business, writing, and pastorship. In particular, he served as the chief executive officer of AZ Agri-Products and chief operating officer of F&P Agri-Inputs, with both companies based in Davao City.
+Given his immersed background in the agriculture sector, Abella champions plans to improve the country’s food security.
+<br><br>
+He is an alumnus of Ateneo de Davao University. At 72, he hopes to become President and develop a government who “listens” to the people.
+</p>
         </div>
       </div>
       <div class="InfographicModal" onclick="InfographicToggle()" style="visibility: hidden;"></div>
       <img class="InfographicPopout" src="Images/Infographic.png" style="visibility: hidden;" alt="">
-      <footer class="footer"> <!-- Version 2.0 -->
+      <footer class="footer"> <!-- Version 2.2 -->
         <div class="leftfooter">
           <div class="footerimages">
             <img src="Images/Foreword Logo Text.png" alt="">
@@ -270,15 +283,15 @@ The Daily Bugle</p>
           </div>
           <p>Foreword 2022 is a student-led event, with organizers belonging to The GUIDON's Beyond Loyola and Externals Staffs. The GUIDON is conducting this assembly in partnership with the Commission on Elections (COMELEC) and media partner ABS-CBN News Channel (ANC). All outputs pertaining to this event were curated following The GUIDON's editorial independence policies.</p>
           <div class="footericons">
-            <a href="https://www.youtube.com/user/TheGuidon"><img src="Images/Icon YT.png" alt=""></a>
-            <a href="https://www.facebook.com/TheGUIDON"><img src="Images/Icon FB.png" alt=""></a>
-            <a href="https://www.instagram.com/theguidon/"><img src="Images/Icon IG.png" alt=""></a>
-            <a href="https://theguidon.com/1112/main/"><img src="Images/Icon Twitter.png" alt=""></a>
-            <a href="https://twitter.com/TheGUIDON"><img src="Images/Icon Web.png" alt=""></a>
+            <a href="https://www.youtube.com/user/TheGuidon" target="_blank"><img src="Images/Icon YT.png" alt=""></a>
+            <a href="https://www.facebook.com/TheGUIDON" target="_blank"><img src="Images/Icon FB.png" alt=""></a>
+            <a href="https://www.instagram.com/theguidon/" target="_blank"><img src="Images/Icon IG.png" alt=""></a>
+            <a href="https://twitter.com/TheGUIDON" target="_blank"><img src="Images/Icon Twitter.png" alt=""></a>
+            <a href="https://theguidon.com" target="_blank"><img src="Images/Icon Web.png" alt=""></a>
           </div>
         </div>
         <div class="rightfooter nomob">
-          <a href="index.html" class="Navoff">Home</a>
+          <a href="index.html">Home</a>
           <a href="03 visions.html">Candidates' Visions</a>
           <a href="04 partners.html">Our Partners</a>
           <a href="05 about guidon.html">About The GUIDON</a>

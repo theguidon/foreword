@@ -55,7 +55,7 @@ p{
   font-family: 'Roboto';
 }
 
-/* NAV start ver 2.0 */
+/* NAV start ver 2.1 */
 nav{
   position:fixed;
   top: 0px;
@@ -104,6 +104,11 @@ nav{
   color: #000E42 !important;
   font-family: "RobotoBold";
   pointer-events: none;
+}
+
+footer .Navoff{
+  color: white !important;
+  font-family: "Roboto";
 }
 
 .navburger{
@@ -191,7 +196,7 @@ footer{
 .rightfooter{
   float: right;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-column-gap: 100px;
   grid-row-gap: 15px;
   margin: 32px 10% 0px 0px;
@@ -211,7 +216,7 @@ footer{
 }
 
 main{
-  /* margin-top: 50px; */
+  margin-top: 50px;
 }
 
 /* NAV end */

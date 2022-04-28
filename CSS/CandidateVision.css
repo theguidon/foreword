@@ -52,7 +52,7 @@ p{
   font-family: 'Roboto';
 }
 
-/* NAV start ver 2.0 */
+/* NAV start ver 2.1 */
 nav{
   position:fixed;
   top: 0px;
@@ -101,6 +101,11 @@ nav{
   color: #000E42 !important;
   font-family: "RobotoBold";
   pointer-events: none;
+}
+
+footer .Navoff{
+  color: white !important;
+  font-family: "Roboto";
 }
 
 .navburger{
@@ -188,7 +193,7 @@ footer{
 .rightfooter{
   float: right;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-column-gap: 100px;
   grid-row-gap: 15px;
   margin: 32px 10% 0px 0px;
@@ -208,7 +213,7 @@ footer{
 }
 
 main{
-  /* margin-top: 50px; */
+  margin-top: 50px;
 }
 
 /* NAV end */
@@ -224,12 +229,12 @@ main{
 }
 
 .Section2{
-  background-color: #0AA2D1;
   background-size: cover;
   display: flex;
-  padding: 40px 8%;
+  padding: 40px 8% 90px;
   column-gap: 50px;
   color: white;
+  transition: backgroundImage 1s;
 }
 
 
@@ -266,6 +271,7 @@ main{
 .Section2flexitem{
   width: 272px;
   cursor: pointer;
+  flex-basis: 30%;
 }
 
 .Hoverlay{
@@ -319,6 +325,7 @@ main{
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
+  width: 210px;
 }
 
 .Line{
@@ -346,6 +353,7 @@ main{
 
 .Section2_2 h1{
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .Section2_2fleximg{
@@ -356,10 +364,16 @@ main{
 .Section2_2arrows{
   height: 18px;
   width: 15px;
+  padding: 30px 2px 10px;
+  cursor: pointer;
 }
 
 .ChangeImg{
   width: 232px;
+}
+
+.Section2_1_2{
+  margin-top: 60px;
 }
 
 .Section2_1_2flex{
@@ -372,14 +386,21 @@ main{
 
 .infographic{
   width: 60%;
-  height: 394px;
+  height: 100%;
   display: block;
 }
 
-.Section2_1_2flex p{
+.Section2_1_2flexright{
   width: 36%;
   display: block;
   color: white;
+}
+
+.smallerpar{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 20px;
 }
 
 .InfographicModal{
