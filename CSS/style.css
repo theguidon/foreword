@@ -384,10 +384,11 @@ main{
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
+  width: 220px;
 }
 
 .Line2{
-  width: 160px;
+  width: 90px;
   border: 0.5px solid rgba(255, 255, 255, 0.34);
   margin: 5px 0px;
 }
