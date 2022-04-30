@@ -415,9 +415,9 @@ main{
 
 .InfographicPopout{
   position: fixed;
-  width: 80%;
-  top: 80px;
-  left: 10%;
+  max-width: 60%;
+  top: 100px;
+  left: 20%;
   z-index: 6;
 }
 
@@ -633,7 +633,8 @@ nav{
 }
 
 .InfographicPopout{
-  width: 80%;
+  max-width: 90%;
+  left: 5%;
 }
 
 .Section3mob{
